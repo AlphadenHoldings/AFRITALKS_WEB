@@ -129,7 +129,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-black text-white hidden">
         <div className="px-6 max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
