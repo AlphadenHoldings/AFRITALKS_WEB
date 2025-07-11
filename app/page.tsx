@@ -17,7 +17,7 @@ export default function Home() {
         }}
       >
         <div className="px-6 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold text-[#fff] mb-6 leading-tight drop-shadow-lg">
             Connect Africa,<br />
             <span className="text-[#fff] drop-shadow-lg">Pay Seamlessly</span>
           </h1>
