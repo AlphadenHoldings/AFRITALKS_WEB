@@ -303,9 +303,7 @@ export default function Contact() {
               </div>
               <h3 className="text-2xl font-bold text-black mb-4">Lagos, Nigeria</h3>
               <p className="text-gray-600 mb-4">
-                Victoria Island<br />
-                Plot 1234, Ahmadu Bello Way<br />
-                Lagos State, Nigeria
+               5th Floor, 11A Oko Awo Street, <br /> Victoria Island, Lagos
               </p>
               <p className="text-[#694bf1] font-semibold">Headquarters</p>
             </div>
