@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Facebook from "../public/icons/facebook.svg";
-import Instagram from "../public/icons/instagram.svg";
-import Linkedin from "../public/icons/linkedin.svg";
-import Logo from "../public/icons/logo_black.svg";
-import X from "../public/icons/X.svg";
+import Facebook from "/public/icons/facebook.svg";
+import Instagram from "/public/icons/instagram.svg";
+import Linkedin from "/public/icons/linkedin.svg";
+import Logo from "/public/icons/logo_black.svg";
+import X from "/public/icons/X.svg";
 
 export default function Footer() {
   return (
