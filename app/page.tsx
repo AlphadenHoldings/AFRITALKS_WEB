@@ -9,7 +9,7 @@ import GoogleIcon from "/public/icons/google_play_fill.svg";
 import Instant_Message from "/public/instant_messaging.png";
 import Payments from "/public/payments.png";
 import Stories from "/public/stories.png";
-import Utilities from "/public/Utilities.png";
+import Utilities from "/public/utilities.png";
 import Iphone from "/public/iphone.png";
 import Countries from "/public/countries.png";
 import Secure from "/public/secure.png";
