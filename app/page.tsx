@@ -3,21 +3,21 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import heroImage from "../public/hero_image.png";
-import AppleIcon from "../public/icons/apple_fill.svg";
-import GoogleIcon from "../public/icons/google_play_fill.svg";
-import Instant_Message from "../public/instant_messaging.png";
-import Payments from "../public/payments.png";
-import Stories from "../public/stories.png";
-import Utilities from "../public/Utilities.png";
-import Iphone from "../public/iphone.png";
-import Countries from "../public/countries.png";
-import Secure from "../public/secure.png";
-import Secure_Icon from "../public/icons/secure.svg";
-import Biometric_Icon from "../public/icons/biometric.svg";
-import Privacy_Icon from "../public/icons/privacy.svg";
-import Testimonials from "../public/testimonial.png";
-import Base_Map from "../public/map-base.png";
+import heroImage from "/public/hero_image.png";
+import AppleIcon from "/public/icons/apple_fill.svg";
+import GoogleIcon from "/public/icons/google_play_fill.svg";
+import Instant_Message from "/public/instant_messaging.png";
+import Payments from "/public/payments.png";
+import Stories from "/public/stories.png";
+import Utilities from "/public/Utilities.png";
+import Iphone from "/public/iphone.png";
+import Countries from "/public/countries.png";
+import Secure from "/public/secure.png";
+import Secure_Icon from "/public/icons/secure.svg";
+import Biometric_Icon from "/public/icons/biometric.svg";
+import Privacy_Icon from "/public/icons/privacy.svg";
+import Testimonials from "/public/testimonial.png";
+import Base_Map from "/public/map-base.png";
 
 export default function Home() {
   return (
@@ -128,7 +128,7 @@ export default function Home() {
 
           <div className="mt-5 space-y-10">
             {howitworks.map((data) => (
-              <div className="flex items-start space-x-5">
+              <div className="flex items-start space-x-5" key={data.id}>
                 <h1 className="bg-[#694BF1] rounded-full h-[2.25rem] w-[2.25rem] text-center leading-[2.25rem] text-white font-inter font-medium">
                   {data.id}
                 </h1>
@@ -190,7 +190,7 @@ export default function Home() {
 
           <div className="mt-8 space-y-10">
             {secure.map((data) => (
-              <div className="flex items-start space-x-5">
+              <div className="flex items-start space-x-5" key={data.id}>
                 <Image src={data.icon} width={50} height={50} alt={data.name} />
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
@@ -223,7 +223,10 @@ export default function Home() {
 
         <div className="flex justify-between mt-10 mx-32">
           {stats.map((data) => (
-            <div className="h-[6.75rem] border-l-2 border-[#694BF1] flex flex-col justify-between pl-5 py-2">
+            <div
+              key={data.rate}
+              className="h-[6.75rem] border-l-2 border-[#694BF1] flex flex-col justify-between pl-5 py-2"
+            >
               <h1 className="leading-none text-[#122231] font-inter font-medium text-[2.75rem]">
                 {data.rate}
               </h1>
@@ -282,8 +285,6 @@ export default function Home() {
     </div>
   );
 }
-
-
 
 const howitworks = [
   {
