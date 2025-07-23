@@ -26,8 +26,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="h-screen w-full flex flex-row from-[#140C42] to-[#0A071A] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] text-white">
-        <div className="flex flex-col gap-y-8 pl-16 justify-center w-[50%]">
-          <h1 className="font-inter text-[3.3rem] font-[600] leading-[3.5rem] text-[#F5F3FF]">
+        <div className="flex flex-col gap-y-8 pl-40 mt-[18%] w-[50%]">
+          <h1 className="font-inter text-[3.375rem] font-[600] leading-[4rem] text-[#F5F3FF]">
             Connect Africa, <br /> pay seamlessly.
           </h1>
           <p className="text-[#F5F3FFB2] font-inter font-[400] text-[1rem]">
@@ -35,12 +35,12 @@ export default function Home() {
             cross-border payments, messaging, stories, and digital <br />{" "}
             utilities across Africa.
           </p>
-          <div className="flex items-center gap-x-5">
-            <button className="bg-[#694BF1] px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
+          <div className="flex items-center gap-x-3">
+            <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Google Icon" width={20} height={20} />
               Download on iOS
             </button>
-            <button className="bg-[#694BF1] px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
+            <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
                 src={GoogleIcon}
                 alt="Google Icon"
@@ -51,13 +51,13 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="w-[50%] h-full">
           <Image
             src={heroImage}
             alt="africa_image_for_hero_section"
-            width={1800}
-            height={1800}
-            className="w-full h-full object-cover object-[40%_40%]"
+            width={2448}
+            height={3244}
+            className="w-[93%] h-full flex ml-auto object-cover object-[0%_10%]"
           />
         </div>
       </section>
