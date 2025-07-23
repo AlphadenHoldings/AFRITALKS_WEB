@@ -11,7 +11,7 @@ export default function Header() {
       <Image src={Logo} alt="logo" width={100} height={100} className="" />
 
       <div className="flex items-center">
-        <ul className="flex items-center space-x-10 font-inter font-semibold  text-white">
+        <ul className="flex items-center space-x-10 font-inter font-semibold text-white">
           <li>
             <Link href={"/services"}>Products</Link>
           </li>
