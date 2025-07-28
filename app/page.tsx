@@ -261,9 +261,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-full bg-[#F9FAFB]">
+      <section className="w-full h-full bg-[#F9FAFB]"
+      id="download"
+      >
         <div
-          className="bg-[#0A071A] h-[25.5rem] mx-5 lg:mx-40 mb-20 rounded-3xl flex flex-col items-center justify-center bg-cover bg-top lg:bg-center"
+          className="bg-[#0A071A] h-[25.5rem] mx-3 px-5 lg:px-0 lg:mx-40 mb-20 rounded-3xl flex flex-col items-center justify-center bg-cover bg-top lg:bg-center"
           style={{ backgroundImage: `url(${Base_Map.src})` }}
         >
           <h1 className="text-[1.75rem] lg:text-[2.5rem] font-semibold font-inter bg-gradient-to-r from-[#FFFFFF] to-[#939299] text-transparent bg-clip-text text-center">
