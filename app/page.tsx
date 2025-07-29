@@ -21,6 +21,7 @@ import Payments from "/public/payments.png";
 import Secure from "/public/secure.png";
 import Stories from "/public/stories.png";
 import Utilities from "/public/utilities.png";
+import CountriesCarousel from "@/components/countriesCarousel";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -165,11 +166,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#F5F3FF] flex flex-col items-center h-[70vh] lg:h-fit pt-20 pb-32 mt-14 lg:mt-0 space-y-5 lg:px-40">
+      <section className="relative bg-[#F5F3FF] flex flex-col items-center h-[70vh] lg:h-fit pt-20 pb-32 mt-14 lg:mt-0 space-y-5 lg:px-40 overflow-hidden">
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
           Powered by <span className="text-[#694BF1]"> PAPPS</span>
         </h1>
-        <p className="text-[#6A7687] text-center w-[97%] lg:w-[75%] font-inter font-normal text-[1rem]">
+        <p className="text-[#6A7687] text-center w-[92%] lg:w-[75%] font-inter font-normal text-[1rem]">
           The Pan African Payment and Settlement System (PAPSS) enables instant,
           secure, and cost-effective cross-border payments across participating
           African countries, making AfriTalks the future of continental
@@ -184,9 +185,11 @@ export default function Home() {
           className="hidden lg:flex lg:w-full"
         />
 
-        <div className="absolute top-[22rem] lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
-          <h3 className="text-[#6A7687] font-inter font-normal">
-            AfriTalks is currently available in 15 African countries <br /> with
+        <CountriesCarousel />
+
+        <div className="absolute top-[29rem] lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
+          <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full;   text-center font-inter font-normal">
+            AfriTalks is currently available in 15 African countries <br className="hidden lg:flex"/> with
             more being added regularly.
           </h3>
 
