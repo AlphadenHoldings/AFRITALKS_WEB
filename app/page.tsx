@@ -1,25 +1,42 @@
 "use client";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { TestimonialCard } from "@/components/testimonialCard";
+import { testimonials } from "@/json/testimonial";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Countries from "/public/countries.png";
 import heroImage from "/public/hero_image.png";
 import AppleIcon from "/public/icons/apple_fill.svg";
+import Biometric_Icon from "/public/icons/biometric.svg";
 import GoogleIcon from "/public/icons/google_play_fill.svg";
+import Privacy_Icon from "/public/icons/privacy.svg";
+import Secure_Icon from "/public/icons/secure.svg";
 import Instant_Message from "/public/instant_messaging.png";
+import Iphone from "/public/iphone.png";
+import Base_Map from "/public/map-base.png";
 import Payments from "/public/payments.png";
+import Secure from "/public/secure.png";
 import Stories from "/public/stories.png";
 import Utilities from "/public/utilities.png";
-import Iphone from "/public/iphone.png";
-import Countries from "/public/countries.png";
-import Secure from "/public/secure.png";
-import Secure_Icon from "/public/icons/secure.svg";
-import Biometric_Icon from "/public/icons/biometric.svg";
-import Privacy_Icon from "/public/icons/privacy.svg";
-import Testimonials from "/public/testimonial.png";
-import Base_Map from "/public/map-base.png";
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const column1 = testimonials.slice(0, 3);
+  const column2 = testimonials.slice(3, 6);
+  const column3 = testimonials.slice(6, 8);
+
+  const handleMouseEnter = (): void => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = (): void => {
+    setIsHovered(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -250,20 +267,110 @@ export default function Home() {
           or sharing moments <br className="hidden lg:flex" /> through short
           videos, AfriTalks keeps you seamlessly connected.
         </p>
-        <div className="mx-40 mt-10 hidden lg:flex">
-          <Image
-            src={Testimonials}
-            alt="testimonials"
-            width={1800}
-            height={1800}
-            className="w-full h-full"
-          />
+        <div className="lg:mx-30 mt-10 flex mx-auto justify-center relative overflow-hidden h-[36rem]">
+          {/* faders */}
+          <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-[#F9FAFB] to-transparent z-10"></div>
+
+          <div className="absolute bottom-0 left-0 w-full h-14 bg-gradient-to-t from-[#F9FAFB] to-transparent z-10"></div>
+
+          {/* mobile */}
+          <div className="flex-1 lg:hidden flex justify-center mx-auto overflow-hidden h-full w-full">
+            <motion.div
+              animate={isHovered ? {} : { y: [-500, 500] }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+                repeatType: "loop",
+              }}
+              className="flex flex-col"
+            >
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`col1-${testimonial.id}-${index}`}
+                  testimonial={testimonial}
+                />
+              ))}
+            </motion.div>
+          </div>
+
+          {/* desktop */}
+          <div
+            className="lg:flex gap-3 h-full hidden"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="flex-1 overflow-hidden">
+              <motion.div
+                animate={isHovered ? {} : { y: [-500, 500] }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop",
+                }}
+                className="flex flex-col"
+              >
+                {[...column1, ...column1, ...column1].map(
+                  (testimonial, index) => (
+                    <TestimonialCard
+                      key={`col1-${testimonial.id}-${index}`}
+                      testimonial={testimonial}
+                    />
+                  )
+                )}
+              </motion.div>
+            </div>
+
+            <div className="flex-1 overflow-hidden">
+              <motion.div
+                animate={isHovered ? {} : { y: [100, -500] }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop",
+                }}
+                className="flex flex-col"
+              >
+                {[...column2, ...column2, ...column2].map(
+                  (testimonial, index) => (
+                    <TestimonialCard
+                      key={`col2-${testimonial.id}-${index}`}
+                      testimonial={testimonial}
+                    />
+                  )
+                )}
+              </motion.div>
+            </div>
+
+            <div className="flex-1 overflow-hidden">
+              <motion.div
+                animate={isHovered ? {} : { y: [-500, 200] }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop",
+                  delay: 2,
+                }}
+                className="flex flex-col"
+              >
+                {[...column3, ...column3, ...column3, ...column3].map(
+                  (testimonial, index) => (
+                    <TestimonialCard
+                      key={`col3-${testimonial.id}-${index}`}
+                      testimonial={testimonial}
+                    />
+                  )
+                )}
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="w-full h-full bg-[#F9FAFB]"
-      id="download"
-      >
+      <section className="w-full h-full bg-[#F9FAFB]" id="download">
         <div
           className="bg-[#0A071A] h-[25.5rem] mx-3 px-5 lg:px-0 lg:mx-40 mb-20 rounded-3xl flex flex-col items-center justify-center bg-cover bg-top lg:bg-center"
           style={{ backgroundImage: `url(${Base_Map.src})` }}
