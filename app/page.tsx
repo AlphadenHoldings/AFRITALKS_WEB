@@ -44,34 +44,54 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="h-screen w-full flex flex-col lg:flex-row from-[#140C42] to-[#0A071A] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] text-white">
-        <div className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[50%]">
-          <h1 className="font-inter text-[2.75rem] lg:text-[3.375rem] font-[600] leading-[4rem] text-[#F5F3FF]">
+        <motion.div
+          className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[50%]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.2 }}
+        >
+          <motion.h1
+            className="font-inter text-[2.75rem] lg:text-[3.375rem] font-[600] leading-[4rem] text-[#F5F3FF]"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Connect Africa, <br /> pay seamlessly.
-          </h1>
-          <p className="text-[#F5F3FFB2] font-inter font-[400] text-[1rem]">
+          </motion.h1>
+
+          <motion.p
+            className="text-[#F5F3FFB2] font-inter font-[400] text-[1rem]"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             The all-in-one social platform powered by PAPPS for{" "}
             <br className="hidden lg:flex" /> cross-border payments, messaging,
             stories, and digital <br className="hidden lg:flex" /> utilities
             across Africa.
-          </p>
-          <div className="flex items-center gap-x-3">
+          </motion.p>
+
+          <motion.div
+            className="flex items-center gap-x-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
-              <Image src={AppleIcon} alt="Google Icon" width={20} height={20} />
-              <span className="hidden lg:flex">Download on iOS</span>
-              <span className="flex lg:hidden">App Store</span>
+              <Image src={AppleIcon} alt="Apple Icon" width={20} height={20} />
+              <span className="hidden lg:flex text-white">Download on iOS</span>
+              <span className="flex lg:hidden text-white">App Store</span>
             </button>
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
-              <Image
-                src={GoogleIcon}
-                alt="Google Icon"
-                width={20}
-                height={20}
-              />
-              <span className="hidden lg:flex"> Download on Android</span>
-              <span className="flex lg:hidden"> PlayStore</span>
+              <Image src={GoogleIcon} alt="Google Icon" width={20} height={20} />
+              <span className="hidden lg:flex text-white">
+                Download on Android
+              </span>
+              <span className="flex lg:hidden text-white">PlayStore</span>
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+
         <div className="w-full lg:w-[50%] h-full">
           <Image
             src={heroImage}
@@ -189,8 +209,8 @@ export default function Home() {
 
         <div className="absolute top-[29rem] lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full;   text-center font-inter font-normal">
-            AfriTalks is currently available in 15 African countries <br className="hidden lg:flex"/> with
-            more being added regularly.
+            AfriTalks is currently available in 15 African countries{" "}
+            <br className="hidden lg:flex" /> with more being added regularly.
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">

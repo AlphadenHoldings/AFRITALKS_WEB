@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
 import { motion, PanInfo } from "framer-motion";
+import Image from "next/image";
+import React, { useState } from "react";
 
 interface Country {
   id: number;
