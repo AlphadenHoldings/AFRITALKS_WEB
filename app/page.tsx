@@ -50,9 +50,9 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="h-screen w-full flex flex-col lg:flex-row from-[#140C42] to-[#0A071A] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] text-white">
+      <section className="h-full lg:h-screen w-full flex flex-col lg:flex-row from-[#140C42] to-[#0A071A] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] text-white">
         <motion.div
-          className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[50%]"
+          className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[50%] z-[10]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2 }}
@@ -110,7 +110,7 @@ export default function Home() {
             alt="africa_image_for_hero_section"
             width={2448}
             height={3244}
-            className="w-[93%] h-full flex ml-auto object-cover object-[0%_10%]"
+            className="w-[93%] h-full flex ml-auto -mt-[5%] z-[-1] object-cover object-[0%_10%]"
           />
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function Home() {
         </h4>
 
         <motion.div
-          className="grid grid-col-1 lg:grid-cols-2 w-fit mx-auto mt-10 gap-5"
+          className="grid grid-col-1 lg:grid-cols-2 w-fit px-5 sm:px-0 mx-auto lg:mx-auto mt-10 gap-5"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -150,7 +150,7 @@ export default function Home() {
                 width={1800}
                 height={1800}
                 alt={image.alt}
-                className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
+                className="h-[21rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
               />
             </motion.div>
           ))}
@@ -216,7 +216,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="relative bg-[#F5F3FF] flex flex-col items-center h-[70vh] lg:h-fit pt-20 pb-32 mt-14 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
+        className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
           Powered by <span className="text-[#694BF1]"> PAPPS</span>
@@ -238,7 +238,7 @@ export default function Home() {
 
         <CountriesCarousel />
 
-        <div className="absolute top-[29rem] lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
+        <div className="lg:absolute lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
             AfriTalks is currently available in 15 African countries{" "}
             <br className="hidden lg:block" /> with more being added regularly.
