@@ -38,6 +38,13 @@ export default function Home() {
     setIsHovered(false);
   };
 
+  const stagesimages = [
+    { src: Instant_Message, alt: "instant message" },
+    { src: Payments, alt: "payments" },
+    { src: Utilities, alt: "utilities" },
+    { src: Stories, alt: "stories" },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -83,7 +90,12 @@ export default function Home() {
               <span className="flex lg:hidden text-white">App Store</span>
             </button>
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
-              <Image src={GoogleIcon} alt="Google Icon" width={20} height={20} />
+              <Image
+                src={GoogleIcon}
+                alt="Google Icon"
+                width={20}
+                height={20}
+              />
               <span className="hidden lg:flex text-white">
                 Download on Android
               </span>
@@ -115,36 +127,34 @@ export default function Home() {
           connect and transact across Africa.
         </h4>
 
-        <div className="grid grid-col-1 lg:grid-cols-2 w-fit mx-auto mt-10 gap-5">
-          <Image
-            src={Instant_Message}
-            width={1800}
-            height={1800}
-            alt="instant message"
-            className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
-          />
-          <Image
-            src={Payments}
-            width={1800}
-            height={1800}
-            alt="instant message"
-            className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
-          />
-          <Image
-            src={Utilities}
-            width={1800}
-            height={1800}
-            alt="instant message"
-            className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
-          />
-          <Image
-            src={Stories}
-            width={1800}
-            height={1800}
-            alt="instant message"
-            className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
-          />
-        </div>
+        <motion.div
+          className="grid grid-col-1 lg:grid-cols-2 w-fit mx-auto mt-10 gap-5"
+          initial={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {stagesimages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+            >
+              <Image
+                src={image.src}
+                width={1800}
+                height={1800}
+                alt={image.alt}
+                className="h-[23.75rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
 
       {/* How It Works Section */}
@@ -166,9 +176,25 @@ export default function Home() {
             Getting started with Africa's most comprehensive social and payment
             platform is simple and secure.
           </h5>
-          <div className="mt-10 lg:mt-5 space-y-10">
+          <motion.div
+            className="mt-10 lg:mt-5 space-y-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             {howitworks.map((data) => (
-              <div className="flex items-start space-x-5" key={data.id}>
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.5,
+                  delay: data.id * 0.15,
+                  ease: "easeOut",
+                }}
+                className="flex items-start space-x-5"
+                key={data.id}
+              >
                 <h1 className="bg-[#694BF1] rounded-full h-[2.25rem] w-[2.25rem] min-w-[2.25rem] flex-shrink-0 flex items-center justify-center text-white font-inter font-medium">
                   {data.id}
                 </h1>
@@ -180,13 +206,18 @@ export default function Home() {
                     {data.desc}
                   </h6>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="relative bg-[#F5F3FF] flex flex-col items-center h-[70vh] lg:h-fit pt-20 pb-32 mt-14 lg:mt-0 space-y-5 lg:px-40 overflow-hidden">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="relative bg-[#F5F3FF] flex flex-col items-center h-[70vh] lg:h-fit pt-20 pb-32 mt-14 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
+      >
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
           Powered by <span className="text-[#694BF1]"> PAPPS</span>
         </h1>
@@ -208,16 +239,16 @@ export default function Home() {
         <CountriesCarousel />
 
         <div className="absolute top-[29rem] lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
-          <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full;   text-center font-inter font-normal">
+          <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
             AfriTalks is currently available in 15 African countries{" "}
-            <br className="hidden lg:flex" /> with more being added regularly.
+            <br className="hidden lg:block" /> with more being added regularly.
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">
             View all
           </button>
         </div>
-      </section>
+      </motion.section>
 
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto lg:px-40 py-28 gap-x-5">
         <div className="w-full lg:w-[50%] px-5 lg:px-0">
@@ -230,9 +261,25 @@ export default function Home() {
             data and money, ensuring every transaction is safe and secure.
           </p>
 
-          <div className="mt-8 space-y-10">
+          <motion.div
+            className="mt-8 space-y-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             {secure.map((data) => (
-              <div className="flex items-start space-x-5" key={data.id}>
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.5,
+                  delay: data.id * 0.15,
+                  ease: "easeOut",
+                }}
+                className="flex items-start space-x-5"
+                key={data.id}
+              >
                 <Image src={data.icon} width={50} height={50} alt={data.name} />
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
@@ -242,9 +289,9 @@ export default function Home() {
                     {data.desc}
                   </h6>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
         <div className="w-full lg:w-[50%] flex m-auto mt-10 lg:mt-0">
           <Image
@@ -394,7 +441,11 @@ export default function Home() {
       </section>
 
       <section className="w-full h-full bg-[#F9FAFB]" id="download">
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="bg-[#0A071A] h-[25.5rem] mx-3 px-5 lg:px-0 lg:mx-40 mb-20 rounded-3xl flex flex-col items-center justify-center bg-cover bg-top lg:bg-center"
           style={{ backgroundImage: `url(${Base_Map.src})` }}
         >
@@ -422,7 +473,7 @@ export default function Home() {
               <span className="flex lg:hidden"> PlayStore</span>
             </button>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <Footer />

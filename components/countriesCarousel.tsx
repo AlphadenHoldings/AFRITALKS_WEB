@@ -10,7 +10,7 @@ interface Country {
 }
 
 const CountriesCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(4); // Start with center item (PAPPS)
+  const [currentIndex, setCurrentIndex] = useState<number>(4);
 
   const countries: Country[] = [
     { id: 1, image: "/icons/flag.svg" },
@@ -28,13 +28,6 @@ const CountriesCarousel: React.FC = () => {
     { id: 9, image: "/icons/flag8.svg" },
     { id: 10, image: "/icons/flag9.svg" },
   ];
-
-  const handleDrag = (
-    event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
-  ) => {
-    // No need to do anything during drag, just for smooth interaction
-  };
 
   const handleDragEnd = (
     event: MouseEvent | TouchEvent | PointerEvent,
@@ -73,7 +66,6 @@ const CountriesCarousel: React.FC = () => {
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
-            onDrag={handleDrag}
             onDragEnd={handleDragEnd}
           >
             {/* Flags arranged in curved formation */}
@@ -139,10 +131,6 @@ const CountriesCarousel: React.FC = () => {
             })}
           </motion.div>
         </div>
-
-        {/* Optional: Dots indicator */}
-
-        {/* Optional: Instructions */}
       </div>
     </div>
   );
