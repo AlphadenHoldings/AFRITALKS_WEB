@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-7 gap-12 max-w-6xl mx-auto">
           <div className="md:col-span-3 space-y-4">
             <Image src={Logo} width={100} height={100} alt="logo" />
-            <p className="text-[#122231B2] text-[0.9rem] lg:text-lg leading-relaxed mb-6">
+            <p className="text-[#122231B2] text-[0.87rem] font-inter leading-relaxed mb-6">
               The ultimate social media and seamless <br /> cross-border
               payments platform for Africa
             </p>
@@ -89,7 +89,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-2 w-[60%] lg:w-full">
+          <div className="md:col-span-2 w-[60%] lg:w-[70%]">
             <h3 className="text-[.87rem] font-inter font-semibold mb-6">
               Contact
             </h3>
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between lg:items-center max-w-6xl mx-auto">
-            <p className="text-[#9CA3AF] font-inter font-normal mb-4 md:mb-0">
+            <p className="text-[#9CA3AF] text-[0.87rem] font-inter font-normal mb-4 md:mb-0">
               © {new Date().getFullYear()} AfriTalks. All rights reserved.
             </p>
             <div className="flex space-x-6">
