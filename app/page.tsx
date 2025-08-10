@@ -46,7 +46,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
       <Header />
 
       {/* Hero Section */}
@@ -218,7 +218,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
-        <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
+        <h1 className="text-[#122231] text-center font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
           Cross border payment powered by{" "}
           <span className="text-[#694BF1]">PAPPS</span>
         </h1>
@@ -311,16 +311,16 @@ export default function Home() {
           at a time
         </h1>
 
-        <div className="flex flex-col lg:flex-row justify-between space-y-5 mt-10 lg:mx-32">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-10 lg:mx-32">
           {stats.map((data) => (
             <div
               key={data.rate}
-              className="h-[6.75rem] border-l-2 border-[#694BF1] flex flex-col justify-between pl-5 py-2"
+              className="h-[6.75rem] border-l-2 border-[#694BF1] flex flex-col justify-between pl-6 py-3"
             >
               <h1 className="leading-none text-[#122231] font-inter font-medium text-[2.75rem]">
                 {data.rate}
               </h1>
-              <p className="leading-none  text-[#6A7687] font-inter font-normal text-[0.9rem]">
+              <p className="leading-none text-[#6A7687] font-inter font-normal text-[0.9rem]">
                 {data.state}
               </p>
             </div>
