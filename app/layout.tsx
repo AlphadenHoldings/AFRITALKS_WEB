@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
-import GoogleTranslate from "../components/googleTranslate";
 import "./globals.css";
 
 const pacifico = Pacifico({
@@ -35,7 +34,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
       >
-        <GoogleTranslate />
         {children}
       </body>
     </html>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Logo from "../public/icons/logo_white.svg";
 import { motion } from "framer-motion";
+import GoogleTranslate from "./googleTranslate";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,12 +16,14 @@ export default function Header() {
 
   return (
     <>
+      <GoogleTranslate />
       <motion.header
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         className="absolute top-0 left-0 right-0 px-3 lg:px-24 h-[5.75rem] flex items-center justify-between z-50"
       >
         <Image src={Logo} alt="logo" width={110} height={110} />
+
         <div className="hidden lg:flex items-center">
           <ul className="flex items-center space-x-10 font-inter font-medium text-white text-[0.875rem]">
             <li>
