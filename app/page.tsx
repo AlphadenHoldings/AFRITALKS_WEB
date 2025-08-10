@@ -52,7 +52,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="h-full lg:h-screen w-full flex flex-col lg:flex-row from-[#140C42] to-[#0A071A] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] text-white">
         <motion.div
-          className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[50%] z-[10]"
+          className="flex flex-col gap-y-8 lg:pl-40 px-3 lg:px-0 mt-[30%] lg:mt-[18%] w-full lg:w-[60%] z-[10]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ staggerChildren: 0.2 }}
@@ -63,7 +63,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Connect Africa, <br /> pay seamlessly.
+            How Africa <br /> connects seamlessly
           </motion.h1>
 
           <motion.p
@@ -72,9 +72,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            The all-in-one social platform powered by PAPPS for{" "}
-            <br className="hidden lg:flex" /> cross-border payments, messaging,
-            stories, and digital <br className="hidden lg:flex" /> utilities
+            The all-in-one social platform for cross-border{" "}
+            <br className="lg:flex hidden" /> payments, messaging, e-commerce,
+            lifestyle, and digital <br className="lg:flex hidden" /> utilities
             across Africa.
           </motion.p>
 
@@ -110,18 +110,18 @@ export default function Home() {
             alt="africa_image_for_hero_section"
             width={2448}
             height={3244}
-            className="w-[93%] h-full flex ml-auto -mt-[5%] z-[-1] object-cover object-[0%_10%]"
+            className="w-[93%] h-full flex ml-auto z-[-1] object-cover object-[0%_10%]"
           />
         </div>
       </section>
 
       {/* Features Section */}
       <section className="h-full min-h-screen py-14">
-        <h1 className="font-inter font-semibold text-[2rem] lg:text-[3rem] text-center w-[80%] lg:w-full mx-auto">
+        <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.8rem] text-center w-[80%] lg:w-full mx-auto">
           Everything you need in <span className="text-[#694BF1]"> one</span>{" "}
           app
         </h1>
-        <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-full mx-auto">
+        <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-full mx-auto mt-5">
           From instant messaging to cross-border payments, AfriTalks brings
           together all the tools you need to <br className="hidden lg:flex" />{" "}
           connect and transact across Africa.
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="h-screen min-h-screen w-fit flex flex-col lg:flex-row mx-auto justify-center mt-20">
+      <section className="h-full w-fit flex flex-col lg:flex-row mx-auto justify-center py-28">
         <div className="w-full lg:w-[45%]">
           <Image
             src={Iphone}
@@ -219,7 +219,8 @@ export default function Home() {
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-          Powered by <span className="text-[#694BF1]"> PAPPS</span>
+          Cross border payment powered by{" "}
+          <span className="text-[#694BF1]">PAPPS</span>
         </h1>
         <p className="text-[#6A7687] text-center w-[92%] lg:w-[75%] font-inter font-normal text-[1rem]">
           The Pan African Payment and Settlement System (PAPSS) enables instant,
