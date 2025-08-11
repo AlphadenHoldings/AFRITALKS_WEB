@@ -1,0 +1,171 @@
+{
+    "header": {
+      "navigation": {
+        "products": "产品",
+        "company": "公司",
+        "contact": "联系"
+      },
+      "buttons": {
+        "downloadNow": "立即下载",
+        "toggleMenu": "切换菜单",
+        "closeMenu": "关闭菜单"
+      }
+    },
+    "footer": {
+      "description": "非洲终极社交媒体和无缝跨境支付平台",
+      "social": {
+        "x": "X",
+        "facebook": "脸书",
+        "instagram": "照片墙",
+        "linkedin": "领英"
+      },
+      "sections": {
+        "products": {
+          "title": "产品",
+          "messaging": "消息",
+          "payments": "支付",
+          "videos": "视频",
+          "utilities": "实用工具"
+        },
+        "company": {
+          "title": "公司",
+          "aboutUs": "关于我们",
+          "careers": "招聘",
+          "faqs": "常见问题",
+          "support": "支持"
+        },
+        "contact": {
+          "title": "联系",
+          "address": "尼日利亚拉各斯维多利亚岛奥科阿沃街 11A",
+          "phone": "0700AFRITALKS",
+          "email": "info@afritalks.com"
+        }
+      },
+      "legal": {
+        "copyright": "© {{year}} AfriTalks。保留所有权利。",
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款"
+      }
+    },
+    "testimonials": {
+      "users": {
+        "1": {
+          "name": "Blessing A.",
+          "location": "尼日利亚，拉各斯",
+          "remark": "AfriTalks 让我可以直接在聊天中轻松把钱汇给在加纳的表亲。没有压力，没有延误。"
+        },
+        "2": {
+          "name": "Lindiwe M.",
+          "location": "南非，约翰内斯堡",
+          "remark": "我喜欢不再需要在应用之间来回切换。我可以和朋友聊天并直接给他们转账。"
+        },
+        "3": {
+          "name": "Ibrahim S.",
+          "location": "埃及，开罗",
+          "remark": "作为小企业主，我用 AfriTalks 和客户聊天并直接收款。真是颠覆性的改变。"
+        },
+        "4": {
+          "name": "James K.",
+          "location": "肯尼亚，内罗毕",
+          "remark": "它就像 WhatsApp、TikTok 和手机银行合为一体。非常适合像我这样喜欢保持联系的人。"
+        },
+        "5": {
+          "name": "Samuel I.",
+          "location": "尼日利亚，阿布贾",
+          "remark": "终于有一个应用能做到所有事情。我可以聊天，给我在肯尼亚的妹妹转钱，甚至还能刷热门视频——都在一个地方完成。"
+        },
+        "6": {
+          "name": "Fatou A.",
+          "location": "马里，巴马科",
+          "remark": "以前汇款很麻烦。现在就像发消息一样简单。即时且安全。"
+        },
+        "7": {
+          "name": "Amina D.",
+          "location": "",
+          "remark": "我惊讶于转账速度之快。而且视频流让我每天都很开心。"
+        },
+        "8": {
+          "name": "Chidera E.",
+          "location": "尼日利亚，哈科特港",
+          "remark": "短视频像 reels 一样令人上瘾，而且我喜欢它们是本地的。这让我有家的感觉。"
+        },
+        "9": {
+          "name": "Aduni S.",
+          "location": "尼日利亚，拉各斯",
+          "remark": "我以前依赖两三个不同的应用，现在只用 AfriTalks。它快速、简单，而且为像我这样的人量身打造。"
+        }
+      }
+    },
+    "home": {
+      "hero": {
+        "title": { "part1": "非洲如何", "part2": "无缝连接" },
+        "subtitle": "集跨境支付、消息、电商、生活方式和数字工具于一体的全能社交平台。",
+        "buttons": {
+          "ios": "在 iOS 下载",
+          "appStore": "App Store",
+          "android": "在 Android 下载",
+          "playStore": "PlayStore"
+        }
+      },
+      "features": {
+        "title": { "part1": "你所需的一切尽在", "highlight": "一个", "part2": "应用" },
+        "subtitle": "从即时消息到跨境支付，AfriTalks 集合了你在非洲互联和交易所需的所有工具。",
+        "images": {
+          "instantMessage": "即时消息",
+          "payments": "支付",
+          "utilities": "实用工具",
+          "stories": "动态"
+        }
+      },
+      "howItWorks": {
+        "title": { "part1": "Africhat 如何", "highlight": "运作" },
+        "subtitle": "使用非洲最全面的社交和支付平台既简单又安全。",
+        "steps": {
+          "1": { "title": "下载并注册", "desc": "下载应用并创建账户" },
+          "2": { "title": "验证与设置", "desc": "完成身份验证并关联支付方式。" },
+          "3": { "title": "连接与交易", "desc": "只需轻点几下即可在非洲范围内转账、付账单和获取服务。" }
+        }
+      },
+      "papps": {
+        "title": { "part1": "跨境支付由", "highlight": "PAPPS 提供支持" },
+        "subtitle": "泛非支付与结算系统（PAPSS）使参与国之间的跨境支付即时、安全、经济，使 AfriTalks 成为非洲大陆互联的未来。",
+        "availability": "AfriTalks 目前在 15 个非洲国家可用，并不断增加中。",
+        "viewAll": "查看全部"
+      },
+      "security": {
+        "title": { "part1": "高级别", "highlight": "安全" },
+        "subtitle": "我们采用与主要银行相同的安全标准保护你的数据和资金，确保每笔交易安全无虞。",
+        "features": {
+          "1": { "name": "端到端加密", "desc": "所有消息和交易均采用军用级安全协议加密。" },
+          "2": { "name": "生物识别认证", "desc": "使用指纹、人脸识别或 PIN 码保护你的账户。" },
+          "3": { "name": "隐私优先", "desc": "未经你的同意，我们绝不会与第三方分享你的个人数据。" }
+        }
+      },
+      "connecting": {
+        "title": { "part1": "连接", "highlight": "非洲", "part2": "——一次一个用户" }
+      },
+      "stats": {
+        "labels": {
+          "activeUsers": "活跃用户",
+          "countries": "国家",
+          "transactions": "交易",
+          "uptime": "正常运行时间"
+        }
+      },
+      "trusted": {
+        "title": { "part1": "受", "highlight": "社区信赖", "part2": "遍布非洲" },
+        "subtitle": "无论你是在和亲友聊天、跨境转账，还是通过短视频分享瞬间，AfriTalks 都能让你无缝保持联系。"
+      },
+      "downloadCta": {
+        "title": "非洲通信的未来。",
+        "subtitle": "聊天、分享、发送——跨越任何边界。",
+        "buttons": {
+          "ios": "在 iOS 下载",
+          "appStore": "App Store",
+          "android": "在 Android 下载",
+          "playStore": "PlayStore"
+        }
+      }
+    }
+  }
+  

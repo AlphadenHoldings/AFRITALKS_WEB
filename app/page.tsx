@@ -1,7 +1,6 @@
 "use client";
 
 import { TestimonialCard } from "@/components/testimonialCard";
-import { testimonials } from "@/json/testimonial";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -22,10 +21,29 @@ import Secure from "/public/secure.png";
 import Stories from "/public/stories.png";
 import Utilities from "/public/utilities.png";
 import CountriesCarousel from "@/components/countriesCarousel";
+import { useTranslation } from "react-i18next";
+
+import "@/utils/i18n/index";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const { t, i18n } = useTranslation();
 
+  // Create testimonial data from i18n
+  const createTestimonials = () => {
+    const testimonialData = [];
+    for (let i = 1; i <= 9; i++) {
+      testimonialData.push({
+        id: i,
+        name: t(`testimonials.users.${i}.name`),
+        location: t(`testimonials.users.${i}.location`),
+        remark: t(`testimonials.users.${i}.remark`)
+      });
+    }
+    return testimonialData;
+  };
+
+  const testimonials = createTestimonials();
   const column1 = testimonials.slice(0, 3);
   const column2 = testimonials.slice(3, 6);
   const column3 = testimonials.slice(6, 8);
@@ -39,10 +57,10 @@ export default function Home() {
   };
 
   const stagesimages = [
-    { src: Instant_Message, alt: "instant message" },
-    { src: Payments, alt: "payments" },
-    { src: Utilities, alt: "utilities" },
-    { src: Stories, alt: "stories" },
+    { src: Instant_Message, key: "instantMessage" },
+    { src: Payments, key: "payments" },
+    { src: Utilities, key: "utilities" },
+    { src: Stories, key: "stories" },
   ];
 
   return (
@@ -63,7 +81,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            How Africa <br /> connects seamlessly
+            {t("home.hero.title.part1")} <br /> {t("home.hero.title.part2")}
           </motion.h1>
 
           <motion.p
@@ -72,10 +90,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            The all-in-one social platform for cross-border{" "}
-            <br className="lg:flex hidden" /> payments, messaging, e-commerce,
-            lifestyle, and digital <br className="lg:flex hidden" /> utilities
-            across Africa.
+            {t("home.hero.subtitle")}
           </motion.p>
 
           <motion.div
@@ -86,8 +101,8 @@ export default function Home() {
           >
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Apple Icon" width={20} height={20} />
-              <span className="hidden lg:flex text-white">Download on iOS</span>
-              <span className="flex lg:hidden text-white">App Store</span>
+              <span className="hidden lg:flex text-white">{t("home.hero.buttons.ios")}</span>
+              <span className="flex lg:hidden text-white">{t("home.hero.buttons.appStore")}</span>
             </button>
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -96,10 +111,8 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <span className="hidden lg:flex text-white">
-                Download on Android
-              </span>
-              <span className="flex lg:hidden text-white">PlayStore</span>
+              <span className="hidden lg:flex text-white">{t("home.hero.buttons.android")}</span>
+              <span className="flex lg:hidden text-white">{t("home.hero.buttons.playStore")}</span>
             </button>
           </motion.div>
         </motion.div>
@@ -118,13 +131,10 @@ export default function Home() {
       {/* Features Section */}
       <section className="h-full min-h-screen py-14">
         <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.8rem] text-center w-[80%] lg:w-full mx-auto">
-          Everything you need in <span className="text-[#694BF1]"> one</span>{" "}
-          app
+          {t("home.features.title.part1")} <span className="text-[#694BF1]"> {t("home.features.title.highlight")} </span> {t("home.features.title.part2")}
         </h1>
-        <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-full mx-auto mt-5">
-          From instant messaging to cross-border payments, AfriTalks brings
-          together all the tools you need to <br className="hidden lg:flex" />{" "}
-          connect and transact across Africa.
+        <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-[60%] mx-auto mt-5">
+          {t("home.features.subtitle")}
         </h4>
 
         <motion.div
@@ -149,7 +159,7 @@ export default function Home() {
                 src={image.src}
                 width={1800}
                 height={1800}
-                alt={image.alt}
+                alt={t(`home.features.images.${image.key}`)}
                 className="h-[21rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
               />
             </motion.div>
@@ -170,11 +180,10 @@ export default function Home() {
         </div>
         <div className="w-[90%] mx-auto mt-10 lg:mt-0 lg:w-[40%] flex flex-col">
           <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            How Africhat <span className="text-[#694BF1]">Works</span>
+            {t("home.howItWorks.title.part1")} <span className="text-[#694BF1]">{t("home.howItWorks.title.highlight")}</span>
           </h1>
           <h5 className="text-[#6A7687] font-inter font-normal text-[1rem]">
-            Getting started with Africa's most comprehensive social and payment
-            platform is simple and secure.
+            {t("home.howItWorks.subtitle")}
           </h5>
           <motion.div
             className="mt-10 lg:mt-5 space-y-10"
@@ -200,10 +209,10 @@ export default function Home() {
                 </h1>
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
-                    {data.name}
+                    {t(`home.howItWorks.steps.${data.id}.title`)}
                   </h1>
                   <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
-                    {data.desc}
+                    {t(`home.howItWorks.steps.${data.id}.desc`)}
                   </h6>
                 </div>
               </motion.div>
@@ -219,14 +228,10 @@ export default function Home() {
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
         <h1 className="text-[#122231] text-center font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-          Cross border payment powered by{" "}
-          <span className="text-[#694BF1]">PAPPS</span>
+          {t("home.papps.title.part1")} <span className="text-[#694BF1]">{t("home.papps.title.highlight")}</span>
         </h1>
         <p className="text-[#6A7687] text-center w-[92%] lg:w-[75%] font-inter font-normal text-[1rem]">
-          The Pan African Payment and Settlement System (PAPSS) enables instant,
-          secure, and cost-effective cross-border payments across participating
-          African countries, making AfriTalks the future of continental
-          connectivity.
+          {t("home.papps.subtitle")}
         </p>
 
         <Image
@@ -241,12 +246,11 @@ export default function Home() {
 
         <div className="lg:absolute lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
-            AfriTalks is currently available in 15 African countries{" "}
-            <br className="hidden lg:block" /> with more being added regularly.
+            {t("home.papps.availability")}
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">
-            View all
+            {t("home.papps.viewAll")}
           </button>
         </div>
       </motion.section>
@@ -254,12 +258,11 @@ export default function Home() {
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto lg:px-40 py-28 gap-x-5">
         <div className="w-full lg:w-[50%] px-5 lg:px-0">
           <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            High-end level <br />{" "}
-            <span className="text-[#694BF1]"> security</span>
+            {t("home.security.title.part1")} <br /> {" "}
+            <span className="text-[#694BF1]"> {t("home.security.title.highlight")} </span>
           </h1>
           <p className="text-[#6A7687] text-[1rem] w-[90%] font-inter font-normal">
-            We use the same security standards as major banks to protect your
-            data and money, ensuring every transaction is safe and secure.
+            {t("home.security.subtitle")}
           </p>
 
           <motion.div
@@ -284,10 +287,10 @@ export default function Home() {
                 <Image src={data.icon} width={50} height={50} alt={data.name} />
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
-                    {data.name}
+                    {t(`home.security.features.${data.id}.name`)}
                   </h1>
                   <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
-                    {data.desc}
+                    {t(`home.security.features.${data.id}.desc`)}
                   </h6>
                 </div>
               </motion.div>
@@ -307,8 +310,7 @@ export default function Home() {
 
       <section className="w-full h-full mt-10 mb-40 pl-4 flex flex-col mx-auto">
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem] lg:text-center w-[90%] lg:w-full">
-          Connecting <span className="text-[#694BF1]"> Africa.</span> One user
-          at a time
+          {t("home.connecting.title.part1")} <span className="text-[#694BF1]"> {t("home.connecting.title.highlight")} </span> {t("home.connecting.title.part2")}
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-10 lg:mx-32">
@@ -321,7 +323,7 @@ export default function Home() {
                 {data.rate}
               </h1>
               <p className="leading-none text-[#6A7687] font-inter font-normal text-[0.9rem]">
-                {data.state}
+                {t(`home.stats.labels.${data.state}`)}
               </p>
             </div>
           ))}
@@ -330,13 +332,11 @@ export default function Home() {
 
       <section className="w-full h-full py-20 pb-40 bg-[#F9FAFB]">
         <h1 className="text-[2rem] lg:text-[2.75rem] font-inter font-semibold text-center leading-[2.3rem] lg:leading-[3rem] w-[80%] mx-auto lg:w-full">
-          Trusted by <span className="text-[#694BF1]"> communities</span> <br />{" "}
-          across Africa
+          {t("home.trusted.title.part1")} <span className="text-[#694BF1]"> {t("home.trusted.title.highlight")} </span> <br /> {" "}
+          {t("home.trusted.title.part2")}
         </h1>
         <p className="text-[#6A7687] font-inter font-normal text-[1rem] text-center w-[90%] mx-auto mt-5">
-          Whether you’re chatting with loved ones, sending money across borders,
-          or sharing moments <br className="hidden lg:flex" /> through short
-          videos, AfriTalks keeps you seamlessly connected.
+          {t("home.trusted.subtitle")}
         </p>
         <div className="lg:mx-30 mt-10 flex mx-auto justify-center relative overflow-hidden h-[36rem]">
           {/* faders */}
@@ -451,17 +451,16 @@ export default function Home() {
           style={{ backgroundImage: `url(${Base_Map.src})` }}
         >
           <h1 className="text-[1.75rem] lg:text-[2.5rem] font-semibold font-inter bg-gradient-to-r from-[#FFFFFF] to-[#939299] text-transparent bg-clip-text text-center">
-            The future of African communication.
+            {t("home.downloadCta.title")}
           </h1>
           <p className="text-[#F5F3FF] font-light text-[1rem] font-inter mt-2 text-center">
-            Talk, share, and send — across <br className="flex lg:hidden" /> any
-            border.
+            {t("home.downloadCta.subtitle")}
           </p>
           <div className="flex items-center gap-x-3 mt-5 lg:mt-10">
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Google Icon" width={20} height={20} />
-              <span className="hidden lg:flex">Download on iOS</span>
-              <span className="flex lg:hidden">App Store</span>
+              <span className="hidden lg:flex">{t("home.downloadCta.buttons.ios")}</span>
+              <span className="flex lg:hidden">{t("home.downloadCta.buttons.appStore")}</span>
             </button>
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -470,8 +469,8 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <span className="hidden lg:flex"> Download on Android</span>
-              <span className="flex lg:hidden"> PlayStore</span>
+              <span className="hidden lg:flex"> {t("home.downloadCta.buttons.android")} </span>
+              <span className="flex lg:hidden"> {t("home.downloadCta.buttons.playStore")} </span>
             </button>
           </div>
         </motion.div>
@@ -524,18 +523,18 @@ const secure = [
 const stats = [
   {
     rate: "1.5M+",
-    state: "Active Users",
+    state: "activeUsers",
   },
   {
     rate: "15",
-    state: "Countries",
+    state: "countries",
   },
   {
     rate: "$1.1M+",
-    state: "Transactions",
+    state: "transactions",
   },
   {
     rate: "99.9%",
-    state: "Uptime",
+    state: "uptime",
   },
 ];

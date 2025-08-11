@@ -1,0 +1,171 @@
+{
+    "header": {
+      "navigation": {
+        "products": "Produtos",
+        "company": "Empresa",
+        "contact": "Contato"
+      },
+      "buttons": {
+        "downloadNow": "Baixar agora",
+        "toggleMenu": "Alternar menu",
+        "closeMenu": "Fechar menu"
+      }
+    },
+    "footer": {
+      "description": "A plataforma definitiva de mídia social e pagamentos transfronteiriços sem atrito para a África",
+      "social": {
+        "x": "X",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      },
+      "sections": {
+        "products": {
+          "title": "Produtos",
+          "messaging": "Mensagens",
+          "payments": "Pagamentos",
+          "videos": "Vídeos",
+          "utilities": "Utilidades"
+        },
+        "company": {
+          "title": "Empresa",
+          "aboutUs": "Sobre nós",
+          "careers": "Carreiras",
+          "faqs": "Perguntas frequentes",
+          "support": "Suporte"
+        },
+        "contact": {
+          "title": "Contato",
+          "address": "11A Oko Awo Street, Victoria Island, Lagos",
+          "phone": "0700AFRITALKS",
+          "email": "info@afritalks.com"
+        }
+      },
+      "legal": {
+        "copyright": "© {{year}} AfriTalks. Todos os direitos reservados.",
+        "privacyPolicy": "Política de Privacidade",
+        "termsOfService": "Termos de Serviço"
+      }
+    },
+    "testimonials": {
+      "users": {
+        "1": {
+          "name": "Blessing A.",
+          "location": "Lagos, Nigéria",
+          "remark": "O AfriTalks facilitou o envio de dinheiro para meu primo em Gana diretamente da nossa conversa. Sem estresse, sem atrasos."
+        },
+        "2": {
+          "name": "Lindiwe M.",
+          "location": "Joanesburgo, África do Sul",
+          "remark": "Adoro não precisar alternar entre aplicativos. Posso conversar com meus amigos e enviar dinheiro sem sair do chat."
+        },
+        "3": {
+          "name": "Ibrahim S.",
+          "location": "Cairo, Egito",
+          "remark": "Como pequeno empresário, uso o AfriTalks para conversar com clientes e receber pagamentos diretamente. É uma virada de jogo."
+        },
+        "4": {
+          "name": "James K.",
+          "location": "Nairóbi, Quênia",
+          "remark": "É como WhatsApp, TikTok e banco móvel tudo em um. O aplicativo perfeito para quem gosta de ficar conectado."
+        },
+        "5": {
+          "name": "Samuel I.",
+          "location": "Abuja, Nigéria",
+          "remark": "Finalmente, um aplicativo que faz tudo. Posso conversar, enviar dinheiro para minha irmã no Quênia e até assistir vídeos em alta — tudo no mesmo lugar."
+        },
+        "6": {
+          "name": "Fatou A.",
+          "location": "Bamaco, Mali",
+          "remark": "Enviar dinheiro costumava ser um grande problema. Agora é como enviar uma mensagem. Instantâneo e seguro."
+        },
+        "7": {
+          "name": "Amina D.",
+          "location": "",
+          "remark": "Fiquei surpresa com a rapidez das transferências. E o feed de vídeos me mantém entretida todos os dias."
+        },
+        "8": {
+          "name": "Chidera E.",
+          "location": "Port Harcourt, Nigéria",
+          "remark": "Os vídeos curtos são viciantes, e adoro que sejam locais. Fazem-me sentir em casa."
+        },
+        "9": {
+          "name": "Aduni S.",
+          "location": "Lagos, Nigéria",
+          "remark": "Eu costumava usar dois ou três aplicativos diferentes, agora uso apenas o AfriTalks. É rápido, simples e feito para pessoas como eu."
+        }
+      }
+    },
+    "home": {
+      "hero": {
+        "title": { "part1": "Como a África", "part2": "se conecta sem esforço" },
+        "subtitle": "A plataforma social tudo-em-um para pagamentos transfronteiriços, mensagens, comércio eletrônico, estilo de vida e serviços digitais em toda a África.",
+        "buttons": {
+          "ios": "Baixar no iOS",
+          "appStore": "App Store",
+          "android": "Baixar no Android",
+          "playStore": "PlayStore"
+        }
+      },
+      "features": {
+        "title": { "part1": "Tudo o que você precisa em", "highlight": "um", "part2": "aplicativo" },
+        "subtitle": "Das mensagens instantâneas aos pagamentos transfronteiriços, o AfriTalks reúne todas as ferramentas necessárias para se conectar e transacionar em toda a África.",
+        "images": {
+          "instantMessage": "mensagem instantânea",
+          "payments": "pagamentos",
+          "utilities": "utilidades",
+          "stories": "stories"
+        }
+      },
+      "howItWorks": {
+        "title": { "part1": "Como o Africhat", "highlight": "funciona" },
+        "subtitle": "Começar com a plataforma social e de pagamentos mais completa da África é simples e seguro.",
+        "steps": {
+          "1": { "title": "Baixar e cadastrar-se", "desc": "Baixe o aplicativo e crie sua conta" },
+          "2": { "title": "Verificar e configurar", "desc": "Conclua a verificação de identidade e vincule seus métodos de pagamento." },
+          "3": { "title": "Conectar e transacionar", "desc": "Envie dinheiro, pague contas e acesse serviços em toda a África com apenas alguns cliques." }
+        }
+      },
+      "papps": {
+        "title": { "part1": "Pagamento transfronteiriço impulsionado por", "highlight": "PAPPS" },
+        "subtitle": "O Sistema Pan-Africano de Pagamentos e Liquidação (PAPSS) possibilita pagamentos transfronteiriços instantâneos, seguros e econômicos entre países participantes, tornando o AfriTalks o futuro da conectividade continental.",
+        "availability": "O AfriTalks está atualmente disponível em 15 países africanos, com novos sendo adicionados regularmente.",
+        "viewAll": "Ver tudo"
+      },
+      "security": {
+        "title": { "part1": "Nível de", "highlight": "segurança elevado" },
+        "subtitle": "Usamos os mesmos padrões de segurança dos grandes bancos para proteger seus dados e dinheiro, garantindo que cada transação seja segura.",
+        "features": {
+          "1": { "name": "Criptografia de ponta a ponta", "desc": "Todas as mensagens e transações são criptografadas com protocolos de segurança de nível militar." },
+          "2": { "name": "Autenticação biométrica", "desc": "Proteja sua conta com impressão digital, reconhecimento facial ou PIN." },
+          "3": { "name": "Privacidade em primeiro lugar", "desc": "Nunca compartilhamos seus dados pessoais com terceiros sem seu consentimento." }
+        }
+      },
+      "connecting": {
+        "title": { "part1": "Conectando", "highlight": "a África.", "part2": "Um usuário de cada vez" }
+      },
+      "stats": {
+        "labels": {
+          "activeUsers": "Usuários ativos",
+          "countries": "Países",
+          "transactions": "Transações",
+          "uptime": "Tempo de atividade"
+        }
+      },
+      "trusted": {
+        "title": { "part1": "Confiável para", "highlight": "comunidades", "part2": "em toda a África" },
+        "subtitle": "Quer esteja conversando com entes queridos, enviando dinheiro além das fronteiras ou compartilhando momentos por meio de vídeos curtos, o AfriTalks mantém você conectado sem interrupções."
+      },
+      "downloadCta": {
+        "title": "O futuro da comunicação africana.",
+        "subtitle": "Converse, compartilhe e envie — sem fronteiras.",
+        "buttons": {
+          "ios": "Baixar no iOS",
+          "appStore": "App Store",
+          "android": "Baixar no Android",
+          "playStore": "PlayStore"
+        }
+      }
+    }
+  }
+  
