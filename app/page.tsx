@@ -194,6 +194,7 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
+      
 
       {/* How It Works Section */}
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto justify-center py-28">
