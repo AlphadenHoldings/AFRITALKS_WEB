@@ -44,7 +44,7 @@ export default function GoogleTranslate() {
   return (
     <div
       ref={googleTranslateRef}
-      className="h-2 w-[2rem] fixed bottom-4 right-0 w-fit transform -translate-x-1/2"
+      className="h-2 w-[2rem] fixed bottom-4 -right-[7rem] lg:right-0 w-fit transform -translate-x-1/2"
     />
   );
 }

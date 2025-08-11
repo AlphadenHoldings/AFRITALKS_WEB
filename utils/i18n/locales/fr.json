@@ -97,6 +97,24 @@
     }
   },
   "home": {
+    "sections": {
+      "instantMessaging": {
+        "title": "Messagerie instantanée",
+        "description": "Connectez-vous et effectuez des paiements à vos amis, votre famille et aux entreprises à travers l'Afrique."
+      },
+      "crossBorderPayments": {
+        "title": "Paiements transfrontaliers",
+        "description": "Envoyez et recevez de l'argent instantanément à travers les frontières africaines en utilisant le PAPSS."
+      },
+      "digitalUtilities": {
+        "title": "Services numériques",
+        "description": "Payez vos factures, achetez du crédit téléphonique, réservez des services et accédez aux services essentiels, tout depuis l'application."
+      },
+      "socialStories": {
+        "title": "Stories sociales",
+        "description": "Partagez vos moments, expériences et culture avec nos fonctionnalités de vidéos sociales engageantes."
+      }
+    },
     "hero": {
       "title": { "part1": "Comment l'Afrique", "part2": "se connecte sans effort" },
       "subtitle": "La plateforme sociale tout-en-un pour les paiements transfrontaliers, la messagerie, le commerce électronique, le style de vie et les services numériques à travers l'Afrique.",
