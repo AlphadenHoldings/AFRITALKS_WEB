@@ -1,12 +1,19 @@
 "use client";
 
+import CountriesCarousel from "@/components/countriesCarousel";
+import GoogleTranslate from "@/components/GoogleTranslate";
 import { TestimonialCard } from "@/components/testimonialCard";
+import "@/utils/i18n/index";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import GoogleTranslate from "@/components/GoogleTranslate";
+import Instant_Message from "/public/Background-connect.svg";
+import Stories from "/public/Background-lifestyle.svg";
+import Payments from "/public/background-payment.svg";
+import Utilities from "/public/Background-utilies.svg";
 import Countries from "/public/countries.png";
 import heroImage from "/public/hero_image.png";
 import AppleIcon from "/public/icons/apple_fill.svg";
@@ -14,16 +21,9 @@ import Biometric_Icon from "/public/icons/biometric.svg";
 import GoogleIcon from "/public/icons/google_play_fill.svg";
 import Privacy_Icon from "/public/icons/privacy.svg";
 import Secure_Icon from "/public/icons/secure.svg";
-import Instant_Message from "/public/instant_messaging.png";
 import Iphone from "/public/iphone.png";
 import Base_Map from "/public/map-base.png";
-import Payments from "/public/payments.png";
 import Secure from "/public/secure.png";
-import Stories from "/public/stories.png";
-import Utilities from "/public/utilities.png";
-import CountriesCarousel from "@/components/countriesCarousel";
-import { useTranslation } from "react-i18next";
-import "@/utils/i18n/index";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -57,10 +57,10 @@ export default function Home() {
   };
 
   const stagesimages = [
-    { src: Instant_Message, key: "instantMessage" },
-    { src: Payments, key: "payments" },
-    { src: Utilities, key: "utilities" },
-    { src: Stories, key: "stories" },
+    { src: Instant_Message, key: "instantMessaging" },
+    { src: Payments, key: "crossBorderPayments" },
+    { src: Utilities, key: "digitalUtilities" },
+    { src: Stories, key: "socialStories" },
   ];
 
   return (
@@ -137,44 +137,59 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="h-full min-h-screen py-14">
-        <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.8rem] text-center w-[80%] lg:w-full mx-auto">
-          {t("home.features.title.part1")}{" "}
-          <span className="text-[#694BF1]">
-            {" "}
-            {t("home.features.title.highlight")}{" "}
-          </span>{" "}
-          {t("home.features.title.part2")}
-        </h1>
-        <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-[60%] mx-auto mt-5">
-          {t("home.features.subtitle")}
-        </h4>
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-[85rem] mx-auto text-center mb-12 md:mb-16">
+          <h1 className="font-inter font-semibold text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] leading-tight mb-4">
+            {t("home.features.title.part1")}{" "}
+            <span className="text-[#694BF1]">
+              {t("home.features.title.highlight")}{" "}
+            </span>
+            {t("home.features.title.part2")}
+          </h1>
+          <h4 className="text-[#6A7687] font-inter text-[1rem] md:text-[1.125rem] max-w-[60rem] mx-auto">
+            {t("home.features.subtitle")}
+          </h4>
+        </div>
 
         <motion.div
-          className="grid grid-col-1 lg:grid-cols-2 w-fit px-5 sm:px-0 mx-auto lg:mx-auto mt-10 gap-5"
-          initial={{ opacity: 1 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 w-fit mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
         >
           {stagesimages.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.2,
                 ease: "easeOut",
               }}
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <Image
-                src={image.src}
-                width={1800}
-                height={1800}
-                alt={t(`home.features.images.${image.key}`)}
-                className="h-[21rem] lg:h-[33.1rem] w-[22rem] lg:w-[32.75rem]"
-              />
+              <div className="w-full md:w-[32.75rem] h-[24rem] md:h-[33.125rem] relative">
+                <Image
+                  src={image.src}
+                  alt={t(`home.features.images.${image.key}`)}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  width={524}
+                  height={530}
+                  priority={index < 2}
+                />
+                <div className="absolute inset-0 transition-all duration-300" />
+                <div className="absolute top-[1.3rem] lg:top-[2.5rem] left-[1rem] lg:left-[2.5rem] right-[1rem] lg:right-[2.5rem] flex flex-col gap-[0.75rem]">
+                  <h2 className="text-[#F5F3FF] font-inter w-full font-medium text-[1.3rem] md:text-[2.25rem] leading-tight tracking-[-0.03em]">
+                    {t(`home.sections.${image.key}.title`)}
+                  </h2>
+                  <p className="text-[#F5F3FF]/90 font-inter text-[0.8rem] lg:text-[1rem] leading-[1.5] w-[75%] lg:w-full max-w-[32rem]">
+                    {t(`home.sections.${image.key}.description`)}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

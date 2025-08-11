@@ -97,6 +97,24 @@
       }
     },
     "home": {
+      "sections": {
+        "instantMessaging": {
+          "title": "即时通讯",
+          "description": "与非洲各地的朋友、家人和企业建立联系并进行支付。"
+        },
+        "crossBorderPayments": {
+          "title": "跨境支付",
+          "description": "使用 PAPSS 系统在非洲各国之间即时发送和接收资金。"
+        },
+        "digitalUtilities": {
+          "title": "数字工具",
+          "description": "在应用内支付账单、购买话费、预订服务并使用基本工具。"
+        },
+        "socialStories": {
+          "title": "社交故事",
+          "description": "通过我们引人入胜的社交视频功能分享您的时刻、经历和文化。"
+        }
+      },
       "hero": {
         "title": { "part1": "非洲如何", "part2": "无缝连接" },
         "subtitle": "集跨境支付、消息、电商、生活方式和数字工具于一体的全能社交平台。",

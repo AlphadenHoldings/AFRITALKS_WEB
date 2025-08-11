@@ -97,6 +97,24 @@
     }
   },
   "home": {
+    "sections": {
+      "instantMessaging": {
+        "title": "Instant messaging",
+        "description": "Connect & make payments to friends, family, and businesses across Africa."
+      },
+      "crossBorderPayments": {
+        "title": "Cross-border payments",
+        "description": "Send and receive money across African borders instantly using the PAPSS."
+      },
+      "digitalUtilities": {
+        "title": "Digital Utilities",
+        "description": "Pay bills, buy airtime, book services, and access essential utilities all from within the app."
+      },
+      "socialStories": {
+        "title": "Social Stories",
+        "description": "Share your moments, experiences, and culture with our engaging social video features."
+      }
+    },
     "hero": {
       "title": { "part1": "How Africa", "part2": "connects seamlessly" },
       "subtitle": "The all-in-one social platform for cross-border payments, messaging, e-commerce, lifestyle, and digital utilities across Africa.",
