@@ -12,6 +12,7 @@ declare global {
 export default function GoogleTranslate() {
   const googleTranslateRef = useRef<HTMLDivElement>(null);
 
+  
   useEffect(() => {
     // Get user's browser language
     const getUserLanguage = () => {
