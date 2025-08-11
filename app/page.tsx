@@ -185,7 +185,7 @@ export default function Home() {
                   <h2 className="text-[#F5F3FF] font-inter w-full font-medium text-[1.3rem] md:text-[2.25rem] leading-tight tracking-[-0.03em]">
                     {t(`home.sections.${image.key}.title`)}
                   </h2>
-                  <p className="text-[#F5F3FF]/90 font-inter text-[0.8rem] lg:text-[1rem] leading-[1.5] w-[75%] lg:w-full max-w-[32rem]">
+                  <p className="text-[#F5F3FF]/90 font-inter text-[0.8rem] lg:text-[1rem] leading-[1.5] w-[75%] lg:w-full">
                     {t(`home.sections.${image.key}.description`)}
                   </p>
                 </div>
