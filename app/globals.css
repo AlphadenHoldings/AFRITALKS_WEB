@@ -24,23 +24,16 @@
 }
 
 /* Remove top margin that Google adds to body */
-
-
-/* Style the main wrapper */
-.google-translate-wrapper {
-  display: absolute;
-  position: flex;
-  top: 10rem;
+body {
+  top: 0 !important;
 }
 
 /* Style the Google Translate gadget container */
 .goog-te-gadget {
   font-family: inherit !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   color: inherit !important;
   white-space: nowrap !important;
-  position: absolute;
-  top: 40rem;
 }
 
 /* Remove Google branding text */
@@ -48,10 +41,15 @@
   display: none !important;
 }
 
+/* Remove the "Powered by" text */
+.goog-te-gadget .goog-te-gadget-simple .goog-te-menu-value span:first-child {
+  display: none !important;
+}
+
 /* Style the dropdown select */
 .goog-te-combo {
   background-color: #ffffff !important;
-  border: 1px solid #d1d5db !important;
+  border: 1px solid #e5e7eb !important;
   border-radius: 6px !important;
   padding: 8px 12px !important;
   font-size: 14px !important;
@@ -61,6 +59,10 @@
   cursor: pointer !important;
   transition: all 0.2s ease !important;
   min-width: 120px !important;
+  max-width: 180px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
 }
 
 .goog-te-combo:hover {
@@ -69,8 +71,55 @@
 }
 
 .goog-te-combo:focus {
-  border-color: #3b82f6 !important;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  border-color: #694bf1 !important;
+  box-shadow: 0 0 0 2px rgba(105, 75, 241, 0.1) !important;
+}
+
+/* Style the simple gadget */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 13px !important;
+  display: inline-block !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: #374151 !important;
+  font-family: inherit !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+/* Ensure the Google Translate widget is visible and properly sized */
+.google-translate-element {
+  display: block !important;
+  min-height: 40px !important;
+}
+
+.google-translate-element .goog-te-gadget {
+  display: block !important;
+  position: relative !important;
+}
+
+/* Force the dropdown to be visible */
+.goog-te-gadget .goog-te-combo {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Style the simple layout */
+.goog-te-gadget-simple {
+  background: transparent !important;
+  border: none !important;
+  font-size: 14px !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: #374151 !important;
+  text-decoration: none !important;
 }
 
 /* Dark mode styles */

@@ -162,7 +162,7 @@ export default function Services() {
               Digital Utilities & Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need for daily life, accessible directly from your Africhat app.
+              Everything you need for daily life, accessible directly from your AfriTalks app.
             </p>
           </div>
 
@@ -244,7 +244,7 @@ export default function Services() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold mb-6">Africhat for Business</h3>
+              <h3 className="text-3xl font-bold mb-6">AfriTalks for Business</h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Transform your business with our comprehensive suite of tools designed for African enterprises.
               </p>
@@ -311,7 +311,7 @@ export default function Services() {
               Developer Platform
             </h2>
             <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              Build on top of Africhat with our comprehensive APIs and developer tools.
+              Build on top of Afritalks with our comprehensive APIs and developer tools.
             </p>
           </div>
 
@@ -370,7 +370,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-[#694bf1] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-all transform hover:scale-105 whitespace-nowrap cursor-pointer">
-              Download Africhat
+              Download AfriTalks
             </button>
             <button className="border-2 border-black text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white transition-all whitespace-nowrap cursor-pointer">
               Business Solutions

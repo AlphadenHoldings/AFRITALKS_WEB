@@ -27,13 +27,13 @@ export default function Header() {
         <div className="hidden lg:flex items-center">
           <ul className="flex items-center space-x-10 font-inter font-medium text-white text-[0.875rem]">
             <li>
-              <Link href={"/services"}>{t("header.navigation.products")}</Link>
+              <Link href={"/#"}>{t("header.navigation.products")}</Link>
             </li>
             <li>
-              <Link href={"/about"}>{t("header.navigation.company")}</Link>
+              <Link href={"/#"}>{t("header.navigation.company")}</Link>
             </li>
             <li>
-              <Link href={"/contact"}>{t("header.navigation.contact")}</Link>
+              <Link href={"/#"}>{t("header.navigation.contact")}</Link>
             </li>
           </ul>
           <button className="px-4 py-2 text-[0.875rem] rounded-full text-white font-inter font-semibold ml-10 bg-[#694BF1]">
@@ -101,7 +101,7 @@ export default function Header() {
             <ul className="space-y-6">
               <li>
                 <Link
-                  href="/services"
+                  href="/#"
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >
@@ -110,7 +110,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/#"
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >
@@ -119,7 +119,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/#"
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import GoogleTranslate from "@/components/GoogleTranslate";
 import Countries from "/public/countries.png";
 import heroImage from "/public/hero_image.png";
 import AppleIcon from "/public/icons/apple_fill.svg";
@@ -22,7 +23,6 @@ import Stories from "/public/stories.png";
 import Utilities from "/public/utilities.png";
 import CountriesCarousel from "@/components/countriesCarousel";
 import { useTranslation } from "react-i18next";
-
 import "@/utils/i18n/index";
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
         id: i,
         name: t(`testimonials.users.${i}.name`),
         location: t(`testimonials.users.${i}.location`),
-        remark: t(`testimonials.users.${i}.remark`)
+        remark: t(`testimonials.users.${i}.remark`),
       });
     }
     return testimonialData;
@@ -76,7 +76,7 @@ export default function Home() {
           transition={{ staggerChildren: 0.2 }}
         >
           <motion.h1
-            className="font-inter text-[2.75rem] lg:text-[3.375rem] font-[600] leading-[4rem] text-[#F5F3FF]"
+            className="font-inter text-[2.75rem] lg:text-[3.375rem] font-[600] leading-[4rem] tracking-[-0.035em] text-[#F5F3FF]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -101,8 +101,12 @@ export default function Home() {
           >
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Apple Icon" width={20} height={20} />
-              <span className="hidden lg:flex text-white">{t("home.hero.buttons.ios")}</span>
-              <span className="flex lg:hidden text-white">{t("home.hero.buttons.appStore")}</span>
+              <span className="hidden lg:flex text-white">
+                {t("home.hero.buttons.ios")}
+              </span>
+              <span className="flex lg:hidden text-white">
+                {t("home.hero.buttons.appStore")}
+              </span>
             </button>
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -111,8 +115,12 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <span className="hidden lg:flex text-white">{t("home.hero.buttons.android")}</span>
-              <span className="flex lg:hidden text-white">{t("home.hero.buttons.playStore")}</span>
+              <span className="hidden lg:flex text-white">
+                {t("home.hero.buttons.android")}
+              </span>
+              <span className="flex lg:hidden text-white">
+                {t("home.hero.buttons.playStore")}
+              </span>
             </button>
           </motion.div>
         </motion.div>
@@ -131,7 +139,12 @@ export default function Home() {
       {/* Features Section */}
       <section className="h-full min-h-screen py-14">
         <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.8rem] text-center w-[80%] lg:w-full mx-auto">
-          {t("home.features.title.part1")} <span className="text-[#694BF1]"> {t("home.features.title.highlight")} </span> {t("home.features.title.part2")}
+          {t("home.features.title.part1")}{" "}
+          <span className="text-[#694BF1]">
+            {" "}
+            {t("home.features.title.highlight")}{" "}
+          </span>{" "}
+          {t("home.features.title.part2")}
         </h1>
         <h4 className="text-[#6A7687] text-center font-inter font-normal text-[1rem] w-[88%] lg:w-[60%] mx-auto mt-5">
           {t("home.features.subtitle")}
@@ -180,7 +193,10 @@ export default function Home() {
         </div>
         <div className="w-[90%] mx-auto mt-10 lg:mt-0 lg:w-[40%] flex flex-col">
           <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            {t("home.howItWorks.title.part1")} <span className="text-[#694BF1]">{t("home.howItWorks.title.highlight")}</span>
+            {t("home.howItWorks.title.part1")}{" "}
+            <span className="text-[#694BF1]">
+              {t("home.howItWorks.title.highlight")}
+            </span>
           </h1>
           <h5 className="text-[#6A7687] font-inter font-normal text-[1rem]">
             {t("home.howItWorks.subtitle")}
@@ -228,7 +244,10 @@ export default function Home() {
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
         <h1 className="text-[#122231] text-center font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-          {t("home.papps.title.part1")} <span className="text-[#694BF1]">{t("home.papps.title.highlight")}</span>
+          {t("home.papps.title.part1")}{" "}
+          <span className="text-[#694BF1]">
+            {t("home.papps.title.highlight")}
+          </span>
         </h1>
         <p className="text-[#6A7687] text-center w-[92%] lg:w-[75%] font-inter font-normal text-[1rem]">
           {t("home.papps.subtitle")}
@@ -258,8 +277,11 @@ export default function Home() {
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto lg:px-40 py-28 gap-x-5">
         <div className="w-full lg:w-[50%] px-5 lg:px-0">
           <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            {t("home.security.title.part1")} <br /> {" "}
-            <span className="text-[#694BF1]"> {t("home.security.title.highlight")} </span>
+            {t("home.security.title.part1")} <br />{" "}
+            <span className="text-[#694BF1]">
+              {" "}
+              {t("home.security.title.highlight")}{" "}
+            </span>
           </h1>
           <p className="text-[#6A7687] text-[1rem] w-[90%] font-inter font-normal">
             {t("home.security.subtitle")}
@@ -310,7 +332,12 @@ export default function Home() {
 
       <section className="w-full h-full mt-10 mb-40 pl-4 flex flex-col mx-auto">
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem] lg:text-center w-[90%] lg:w-full">
-          {t("home.connecting.title.part1")} <span className="text-[#694BF1]"> {t("home.connecting.title.highlight")} </span> {t("home.connecting.title.part2")}
+          {t("home.connecting.title.part1")}{" "}
+          <span className="text-[#694BF1]">
+            {" "}
+            {t("home.connecting.title.highlight")}{" "}
+          </span>{" "}
+          {t("home.connecting.title.part2")}
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-10 lg:mx-32">
@@ -332,8 +359,12 @@ export default function Home() {
 
       <section className="w-full h-full py-20 pb-40 bg-[#F9FAFB]">
         <h1 className="text-[2rem] lg:text-[2.75rem] font-inter font-semibold text-center leading-[2.3rem] lg:leading-[3rem] w-[80%] mx-auto lg:w-full">
-          {t("home.trusted.title.part1")} <span className="text-[#694BF1]"> {t("home.trusted.title.highlight")} </span> <br /> {" "}
-          {t("home.trusted.title.part2")}
+          {t("home.trusted.title.part1")}{" "}
+          <span className="text-[#694BF1]">
+            {" "}
+            {t("home.trusted.title.highlight")}{" "}
+          </span>{" "}
+          <br /> {t("home.trusted.title.part2")}
         </h1>
         <p className="text-[#6A7687] font-inter font-normal text-[1rem] text-center w-[90%] mx-auto mt-5">
           {t("home.trusted.subtitle")}
@@ -459,8 +490,12 @@ export default function Home() {
           <div className="flex items-center gap-x-3 mt-5 lg:mt-10">
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Google Icon" width={20} height={20} />
-              <span className="hidden lg:flex">{t("home.downloadCta.buttons.ios")}</span>
-              <span className="flex lg:hidden">{t("home.downloadCta.buttons.appStore")}</span>
+              <span className="hidden lg:flex">
+                {t("home.downloadCta.buttons.ios")}
+              </span>
+              <span className="flex lg:hidden">
+                {t("home.downloadCta.buttons.appStore")}
+              </span>
             </button>
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -469,14 +504,21 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <span className="hidden lg:flex"> {t("home.downloadCta.buttons.android")} </span>
-              <span className="flex lg:hidden"> {t("home.downloadCta.buttons.playStore")} </span>
+              <span className="hidden lg:flex">
+                {" "}
+                {t("home.downloadCta.buttons.android")}{" "}
+              </span>
+              <span className="flex lg:hidden">
+                {" "}
+                {t("home.downloadCta.buttons.playStore")}{" "}
+              </span>
             </button>
           </div>
         </motion.div>
       </section>
 
       <Footer />
+      <GoogleTranslate />
     </div>
   );
 }
