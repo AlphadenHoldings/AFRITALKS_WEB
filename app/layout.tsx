@@ -21,29 +21,32 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AfriTalks",
-  description: "Afritalks - Your trusted platform for secure messaging and communication across Africa",
+  description:
+    "Afritalks - Your trusted platform for secure messaging and communication across Africa",
   icons: {
-    icon: '/icons/logo_black.svg',
-    shortcut: '/icons/logo_black.svg',
-    apple: '/icons/apple_fill.svg',
+    icon: "/icons/logo_black.svg",
+    shortcut: "/icons/logo_black.svg",
+    apple: "/icons/apple_fill.svg",
   },
   openGraph: {
-    title: 'AfriTalks',
-    description: 'Afritalks - Your trusted platform for secure messaging and communication across Africa',
+    title: "AfriTalks",
+    description:
+      "Afritalks - Your trusted platform for secure messaging and communication across Africa",
     images: [
       {
-        url: '/icons/logo_black.svg',
+        url: "/icons/logo_black.svg",
         width: 1200,
         height: 630,
-        alt: 'Afritalks Logo',
+        alt: "Afritalks Logo",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'AfriTalks',
-    description: 'Afritalks - Your trusted platform for secure messaging and communication across Africa',
-    images: ['/icons/logo_black.svg'],
+    card: "summary_large_image",
+    title: "AfriTalks",
+    description:
+      "Afritalks - Your trusted platform for secure messaging and communication across Africa",
+    images: ["/icons/logo_black.svg"],
   },
 };
 
@@ -62,4 +65,3 @@ export default function RootLayout({
     </html>
   );
 }
-
