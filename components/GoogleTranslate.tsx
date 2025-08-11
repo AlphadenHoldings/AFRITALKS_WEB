@@ -13,6 +13,13 @@ export default function GoogleTranslate() {
   const googleTranslateRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Get user's browser language
+    const getUserLanguage = () => {
+      const browserLang = navigator.language.split('-')[0].toLowerCase();
+      const supportedLanguages = ['en', 'fr', 'ar', 'es', 'pt', 'zh', 'sw', 'ha', 'yo', 'ig'];
+      return supportedLanguages.includes(browserLang) ? browserLang : 'en';
+    };
+
     if (!document.querySelector('script[src*="translate.google.com"]')) {
       const script = document.createElement("script");
       script.src =
@@ -23,9 +30,10 @@ export default function GoogleTranslate() {
 
     window.googleTranslateElementInit = () => {
       if (googleTranslateRef.current) {
+        const detectedLanguage = getUserLanguage();
         new window.google.translate.TranslateElement(
           {
-            pageLanguage: "en",
+            pageLanguage: detectedLanguage,
             includedLanguages: "en,fr,ar,es,pt,zh,sw,ha,yo,ig",
             layout:
               window.google.translate.TranslateElement.InlineLayout.SIMPLE,
