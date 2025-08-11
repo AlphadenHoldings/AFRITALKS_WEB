@@ -38,7 +38,7 @@ export default function About() {
                 To create the most comprehensive social and financial platform that unites Africa, enabling seamless communication, payments, and digital services across all 54 countries.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We believe that technology should break down barriers, not create them. That's why we've built Africhat to be more than just an app – it's a movement towards a more connected, prosperous Africa.
+                We believe that technology should break down barriers, not create them. That's why we've built Afritalks to be more than just an app – it's a movement towards a more connected, prosperous Africa.
               </p>
             </div>
             <div>

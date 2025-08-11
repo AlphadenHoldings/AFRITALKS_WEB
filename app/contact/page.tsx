@@ -72,7 +72,7 @@ export default function Contact() {
             Get in <span className="text-[#694bf1] drop-shadow-lg">Touch</span>
           </h1>
           <p className="text-xl md:text-2xl text-white leading-relaxed drop-shadow-md">
-            We're here to help you succeed with Africhat. Reach out to our team for support, partnerships, or any questions about our platform.
+            We're here to help you succeed with AfriTalks. Reach out to our team for support, partnerships, or any questions about our platform.
           </p>
         </div>
       </section>

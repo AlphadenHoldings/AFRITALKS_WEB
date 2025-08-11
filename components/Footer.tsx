@@ -48,9 +48,9 @@ export default function Footer() {
                 height={20}
               />
             </div>
-            <div>
+            {/* <div>
               <LanguageSwitcher />
-            </div>
+            </div> */}
           </div>
 
           <div className="md:col-span-2 flex gap-x-8 md:gap-x-20">
