@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import Facebook from "/public/icons/facebook.svg";
 import Instagram from "/public/icons/instagram.svg";
 import Linkedin from "/public/icons/linkedin.svg";
 import Logo from "/public/icons/logo_black.svg";
 import X from "/public/icons/x.svg";
-import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -20,7 +19,7 @@ export default function Footer() {
           <div className="md:col-span-3 space-y-4">
             <Image src={Logo} width={100} height={100} alt="logo" />
             <p className="text-[#122231B2] text-[0.87rem] font-inter leading-relaxed mb-6">
-              The ultimate social media and seamless cross-border payments platform for Africa
+              The ultimate social media and seamless <br className="hidden lg:block" /> cross-border payments platform for Africa
             </p>
             <div className="flex space-x-5">
               <Image
@@ -55,7 +54,7 @@ export default function Footer() {
 
           <div className="md:col-span-2 flex gap-x-8 md:gap-x-20">
             <div className="flex-1">
-              <h3 className="text-[.87rem] font-inter font-semibold mb-6">
+              <h3 className="text-[.87rem] tracking-[-0.02em] font-inter font-semibold mb-6">
                 Products
               </h3>
               <ul className="space-y-4">
@@ -75,7 +74,7 @@ export default function Footer() {
             </div>
 
             <div className="flex-1">
-              <h3 className="text-[.87rem] font-inter font-semibold mb-6">
+              <h3 className="text-[.87rem] tracking-[-0.02em] font-inter font-semibold mb-6">
                 Company
               </h3>
               <ul className="space-y-4">
@@ -116,7 +115,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2 w-[60%] lg:w-[70%]">
-            <h3 className="text-[.87rem] font-inter font-semibold mb-6">
+            <h3 className="text-[.87rem] tracking-[-0.02em] font-inter font-semibold mb-6">
               Contact
             </h3>
             <ul className="flex flex-col space-y-5">

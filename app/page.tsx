@@ -27,7 +27,7 @@ import Secure from "/public/secure.png";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
   // Create testimonial data
   const createTestimonials = () => {
@@ -140,13 +140,15 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-[#F5F3FFB2] font-inter font-[400] text-[1rem]"
+            className="text-[#F5F3FFB2] font-inter font-[400] text-[1rem] w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            The all-in-one social platform for cross-border payments, messaging,
-            e-commerce, lifestyle, and digital utilities across Africa.
+            The all-in-one social platform for cross-border{" "}
+            <br className="hidden lg:block" /> payments, messaging, e-commerce,
+            lifestyle, and digital <br className="hidden lg:block" /> utilities
+            across Africa.
           </motion.p>
 
           <motion.div
@@ -193,7 +195,7 @@ export default function Home() {
             Everything you need in <span className="text-[#694BF1]">one </span>
             app
           </h1>
-          <h4 className="text-[#6A7687] font-inter text-[1rem] md:text-[1.125rem] max-w-[60rem] mx-auto">
+          <h4 className="text-[#6A7687] font-inter text-[1rem] md:text-[1.125rem] max-w-[55rem] mx-auto">
             From instant messaging to cross-border payments, AfriTalks brings
             together all the tools you need to connect and transact across
             Africa.
@@ -239,7 +241,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 transition-all duration-300" />
                 <div className="absolute top-[1.3rem] lg:top-[2.5rem] left-[1rem] lg:left-[2.5rem] right-[1rem] lg:right-[2.5rem] flex flex-col gap-[0.75rem]">
-                  <h2 className="text-[#F5F3FF] font-inter w-full font-medium text-[1.3rem] md:text-[2.25rem] leading-tight tracking-[-0.03em]">
+                  <h2 className="text-[#F5F3FF] font-inter w-full font-medium text-[1.3rem] md:text-[2.25rem] leading-tight tracking-[-0.035em]">
                     {image.key === "instantMessaging"
                       ? "Instant messaging"
                       : image.key === "crossBorderPayments"
@@ -276,7 +278,7 @@ export default function Home() {
           />
         </div>
         <div className="w-[90%] mx-auto mt-10 lg:mt-0 lg:w-[40%] flex flex-col">
-          <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
+          <h1 className="font-inter font-semibold text-[2rem] tracking-[-0.035em] lg:text-[2.75rem]">
             How Afritalks <span className="text-[#694BF1]">Works</span>
           </h1>
           <h5 className="text-[#6A7687] font-inter font-normal text-[1rem]">
@@ -306,7 +308,7 @@ export default function Home() {
                   {data.id}
                 </h1>
                 <div className="flex flex-col space-y-2">
-                  <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
+                  <h1 className="text-[#122231] -tracking-[0.035em] font-inter font-semibold text-[1.18rem]">
                     {data.name}
                   </h1>
                   <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
@@ -325,7 +327,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
-        <h1 className="text-[#122231] text-center font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
+        <h1 className="text-[#122231] text-center tracking-[-0.035em] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
           Cross border payment powered by{" "}
           <span className="text-[#694BF1]">PAPPS</span>
         </h1>
@@ -348,8 +350,8 @@ export default function Home() {
 
         <div className="lg:absolute lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
-            AfriTalks is currently available in 15 African countries with more
-            being added regularly.
+            AfriTalks is currently available in 15 African countries{" "}
+            <br className="hidden lg:block" /> with more being added regularly.
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">
@@ -360,7 +362,7 @@ export default function Home() {
 
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto lg:px-40 py-28 gap-x-5">
         <div className="w-full lg:w-[50%] px-5 lg:px-0">
-          <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
+          <h1 className="text-[#122231] tracking-[-0.035em] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
             High-end level <br />{" "}
             <span className="text-[#694BF1]"> security </span>
           </h1>
@@ -370,7 +372,7 @@ export default function Home() {
           </p>
 
           <motion.div
-            className="mt-8 space-y-10"
+            className="mt-8 space-y-10 w-full lg:w-[85%]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -390,10 +392,10 @@ export default function Home() {
               >
                 <Image src={data.icon} width={50} height={50} alt={data.name} />
                 <div className="flex flex-col space-y-2">
-                  <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
+                  <h1 className="text-[#122231] tracking-[-0.03em] font-inter font-semibold text-[1.18rem]">
                     {data.name}
                   </h1>
-                  <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
+                  <h6 className="text-[#6A7687] tracking-[-0.0em] text-[0.8rem] font-inter font-normal">
                     {data.desc}
                   </h6>
                 </div>
@@ -413,7 +415,7 @@ export default function Home() {
       </section>
 
       <section className="w-full h-full mt-10 mb-40 pl-4 flex flex-col mx-auto">
-        <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem] lg:text-center w-[90%] lg:w-full">
+        <h1 className="text-[#122231] tracking-[-0.035em] font-inter font-semibold text-[2rem] lg:text-[2.75rem] lg:text-center w-[90%] lg:w-full">
           Connecting <span className="text-[#694BF1]"> Africa. </span> One user
           at a time
         </h1>
@@ -424,7 +426,7 @@ export default function Home() {
               key={data.rate}
               className="h-[6.75rem] border-l-2 border-[#694BF1] flex flex-col justify-between pl-6 py-3"
             >
-              <h1 className="leading-none text-[#122231] font-inter font-medium text-[2.75rem]">
+              <h1 className="leading-none tracking-[-0.0096em] text-[#122231] font-inter font-medium text-[2.75rem]">
                 {data.rate}
               </h1>
               <p className="leading-none text-[#6A7687] font-inter font-normal text-[0.9rem]">
@@ -442,16 +444,14 @@ export default function Home() {
       </section>
 
       <section className="w-full h-full py-20 pb-40 bg-[#F9FAFB]">
-        <h1 className="text-[2rem] lg:text-[2.75rem] font-inter font-semibold text-center leading-[2.3rem] lg:leading-[3rem] w-[80%] mx-auto lg:w-full">
-          Trusted by{" "}
-          <span className="text-[#694BF1]">
-            {" "}
-            communities{" "}
-          </span>{" "}
+        <h1 className="text-[2rem] tracking-[-0.035em] lg:text-[2.75rem] font-inter font-semibold text-center leading-[2.3rem] lg:leading-[3rem] w-[80%] mx-auto lg:w-full">
+          Trusted by <span className="text-[#694BF1]"> communities </span>{" "}
           <br /> across Africa
         </h1>
-        <p className="text-[#6A7687] font-inter font-normal text-[1rem] text-center w-[90%] mx-auto mt-5">
-          Whether you're chatting with loved ones, sending money across borders, or sharing moments through short videos, AfriTalks keeps you seamlessly connected.
+        <p className="text-[#6A7687] font-inter font-normal text-[1rem] text-center w-full lg:w-[55%] mx-auto mt-5">
+          Whether you're chatting with loved ones, sending money across borders,
+          or sharing moments through short videos, AfriTalks keeps you
+          seamlessly connected.
         </p>
         <div className="lg:mx-30 mt-10 flex mx-auto justify-center relative overflow-hidden h-[36rem]">
           {/* faders */}
