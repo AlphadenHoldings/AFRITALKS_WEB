@@ -5,7 +5,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-16 font-inter">
       <div className="text-center max-w-screen-sm mx-auto">
-        
         <h1
           className="text-[8rem] sm:text-[10rem] md:text-[12rem] font-bold leading-none tracking-tighter transition-all"
           style={{
@@ -18,16 +17,13 @@ export default function NotFound() {
           404
         </h1>
 
-
         <h2 className="font-inter text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mt-2 sm:mt-4">
           Page Not Found
         </h2>
 
-
         <p className="mt-3 sm:mt-4 font-inter text-base sm:text-lg text-gray-600 max-w-lg mx-auto font-light px-4">
           The page you're looking for doesn't exist or has been moved.
         </p>
-
 
         <Link
           href="/"
