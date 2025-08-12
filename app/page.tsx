@@ -350,8 +350,8 @@ export default function Home() {
 
         <div className="lg:absolute lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
-            AfriTalks is currently available in 15 African countries <br className="hidden lg:block" /> with more
-            being added regularly.
+            AfriTalks is currently available in 15 African countries{" "}
+            <br className="hidden lg:block" /> with more being added regularly.
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">

@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import Facebook from "/public/icons/facebook.svg";
 import Instagram from "/public/icons/instagram.svg";
 import Linkedin from "/public/icons/linkedin.svg";
 import Logo from "/public/icons/logo_black.svg";
 import X from "/public/icons/x.svg";
-import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
   const { t } = useTranslation();
