@@ -20,30 +20,30 @@ export default function Footer() {
           <div className="md:col-span-3 space-y-4">
             <Image src={Logo} width={100} height={100} alt="logo" />
             <p className="text-[#122231B2] text-[0.87rem] font-inter leading-relaxed mb-6">
-              {t("footer.description")}
+              The ultimate social media and seamless cross-border payments platform for Africa
             </p>
             <div className="flex space-x-5">
               <Image
                 src={X}
-                alt={t("footer.social.x")}
+                alt="X"
                 width={20}
                 height={20}
               />
               <Image
                 src={Facebook}
-                alt={t("footer.social.facebook")}
+                alt="Facebook"
                 width={20}
                 height={20}
               />
               <Image
                 src={Instagram}
-                alt={t("footer.social.instagram")}
+                alt="Instagram"
                 width={20}
                 height={20}
               />
               <Image
                 src={Linkedin}
-                alt={t("footer.social.linkedin")}
+                alt="LinkedIn"
                 width={20}
                 height={20}
               />
@@ -56,27 +56,27 @@ export default function Footer() {
           <div className="md:col-span-2 flex gap-x-8 md:gap-x-20">
             <div className="flex-1">
               <h3 className="text-[.87rem] font-inter font-semibold mb-6">
-                {t("footer.sections.products.title")}
+                Products
               </h3>
               <ul className="space-y-4">
                 <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                  {t("footer.sections.products.messaging")}
+                  Messaging
                 </li>
                 <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                  {t("footer.sections.products.payments")}
+                  Payments
                 </li>
                 <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                  {t("footer.sections.products.videos")}
+                  Videos
                 </li>
                 <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                  {t("footer.sections.products.utilities")}
+                  Utilities
                 </li>
               </ul>
             </div>
 
             <div className="flex-1">
               <h3 className="text-[.87rem] font-inter font-semibold mb-6">
-                {t("footer.sections.company.title")}
+                Company
               </h3>
               <ul className="space-y-4">
                 <li>
@@ -84,7 +84,7 @@ export default function Footer() {
                     href="/about"
                     className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem]"
                   >
-                    {t("footer.sections.company.aboutUs")}
+                    About Us
                   </Link>
                 </li>
                 <li>
@@ -92,7 +92,7 @@ export default function Footer() {
                     href="#"
                     className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem]"
                   >
-                    {t("footer.sections.company.careers")}
+                    Careers
                   </Link>
                 </li>
                 <li>
@@ -100,7 +100,7 @@ export default function Footer() {
                     href="#"
                     className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem]"
                   >
-                    {t("footer.sections.company.faqs")}
+                    FAQs
                   </Link>
                 </li>
                 <li>
@@ -108,7 +108,7 @@ export default function Footer() {
                     href="#"
                     className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem]"
                   >
-                    {t("footer.sections.company.support")}
+                    Support
                   </Link>
                 </li>
               </ul>
@@ -117,17 +117,17 @@ export default function Footer() {
 
           <div className="md:col-span-2 w-[60%] lg:w-[70%]">
             <h3 className="text-[.87rem] font-inter font-semibold mb-6">
-              {t("footer.sections.contact.title")}
+              Contact
             </h3>
             <ul className="flex flex-col space-y-5">
               <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                {t("footer.sections.contact.address")}
+                11A Oko Awo Street, Victoria Island, Lagos
               </li>
               <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                {t("footer.sections.contact.phone")}
+                0700AFRITALKS
               </li>
               <li className="text-[#122231B2] font-inter font-500 font-medium text-[0.8rem] cursor-pointer">
-                {t("footer.sections.contact.email")}
+                info@afritalks.com
               </li>
             </ul>
           </div>
@@ -136,20 +136,20 @@ export default function Footer() {
         <div className="mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between lg:items-center max-w-6xl mx-auto">
             <p className="text-[#9CA3AF] text-[0.87rem] font-inter font-normal mb-4 md:mb-0">
-              {t("footer.legal.copyright", { year: new Date().getFullYear() })}
+              © {new Date().getFullYear()} AfriTalks. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link
                 href="#"
                 className="text-[#9CA3AF] font-inter font-normal text-[0.87rem] transition-colors"
               >
-                {t("footer.legal.privacyPolicy")}
+                Privacy Policy
               </Link>
               <Link
                 href="#"
                 className="text-[#9CA3AF] font-inter font-normal text-[0.87rem] transition-colors"
               >
-                {t("footer.legal.termsOfService")}
+                Terms of Service
               </Link>
             </div>
           </div>

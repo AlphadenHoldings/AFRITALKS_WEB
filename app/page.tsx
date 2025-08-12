@@ -29,18 +29,73 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { t, i18n } = useTranslation();
 
-  // Create testimonial data from i18n
+  // Create testimonial data
   const createTestimonials = () => {
-    const testimonialData = [];
-    for (let i = 1; i <= 9; i++) {
-      testimonialData.push({
-        id: i,
-        name: t(`testimonials.users.${i}.name`),
-        location: t(`testimonials.users.${i}.location`),
-        remark: t(`testimonials.users.${i}.remark`),
-      });
-    }
-    return testimonialData;
+    return [
+      {
+        id: 1,
+        name: "Blessing A.",
+        location: "Lagos, Nigeria",
+        remark:
+          "AfriTalks made it so easy to send money to my cousin in Ghana right from our chat. No stress, no delays.",
+      },
+      {
+        id: 2,
+        name: "Lindiwe M.",
+        location: "Johannesburg, S.A",
+        remark:
+          "I love that I don't have to switch between apps anymore. I talk to friends and send them cash without leaving the chat",
+      },
+      {
+        id: 3,
+        name: "Ibrahim S.",
+        location: "Cairo, Egypt",
+        remark:
+          "As a small business owner, I use AfriTalks to chat with customers and receive payments directly. Game-changer.",
+      },
+      {
+        id: 4,
+        name: "James K.",
+        location: "Nairobi, Kenya",
+        remark:
+          "It's like WhatsApp, TikTok, and a mobile bank rolled into one. The perfect app for people like me who love staying connected.",
+      },
+      {
+        id: 5,
+        name: "Samuel I.",
+        location: "Abuja, Nigeria",
+        remark:
+          "Finally, one app that does it all. I can chat, send money to my sister in Kenya, and even catch up on trending videos — all in one place.",
+      },
+      {
+        id: 6,
+        name: "Fatou A.",
+        location: "Bamako, Mali",
+        remark:
+          "Sending money used to be a headache. Now, it feels like sending a message. Instant and secure.",
+      },
+      {
+        id: 7,
+        name: "Amina D.",
+        location: "",
+        remark:
+          "I was surprised how fast the transfers were. And the video feed keeps me entertained daily",
+      },
+      {
+        id: 8,
+        name: "Chidera E.",
+        location: "Port Harcourt, Nigeria",
+        remark:
+          "The reels-style videos are addictive, and I love that they're local. It feels like home",
+      },
+      {
+        id: 9,
+        name: "Aduni S.",
+        location: "Lagos, Nigeria",
+        remark:
+          "I used to rely on two or three different apps, now I just use AfriTalks. It's fast, simple, and made for people like me",
+      },
+    ];
   };
 
   const testimonials = createTestimonials();
@@ -81,7 +136,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {t("home.hero.title.part1")} <br /> {t("home.hero.title.part2")}
+            How Africa <br /> connects seamlessly
           </motion.h1>
 
           <motion.p
@@ -90,7 +145,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {t("home.hero.subtitle")}
+            The all-in-one social platform for cross-border payments, messaging,
+            e-commerce, lifestyle, and digital utilities across Africa.
           </motion.p>
 
           <motion.div
@@ -101,12 +157,8 @@ export default function Home() {
           >
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Apple Icon" width={20} height={20} />
-              <span className="hidden lg:flex text-white">
-                {t("home.hero.buttons.ios")}
-              </span>
-              <span className="flex lg:hidden text-white">
-                {t("home.hero.buttons.appStore")}
-              </span>
+              <span className="hidden lg:flex text-white">Download on iOS</span>
+              <span className="flex lg:hidden text-white">App Store</span>
             </button>
             <button className="bg-[#694BF1] px-5 py-2.5 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -116,11 +168,9 @@ export default function Home() {
                 height={20}
               />
               <span className="hidden lg:flex text-white">
-                {t("home.hero.buttons.android")}
+                Download on Android
               </span>
-              <span className="flex lg:hidden text-white">
-                {t("home.hero.buttons.playStore")}
-              </span>
+              <span className="flex lg:hidden text-white">PlayStore</span>
             </button>
           </motion.div>
         </motion.div>
@@ -140,14 +190,13 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-[85rem] mx-auto text-center mb-12 md:mb-16">
           <h1 className="font-inter font-semibold text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] leading-tight mb-4">
-            {t("home.features.title.part1")}{" "}
-            <span className="text-[#694BF1]">
-              {t("home.features.title.highlight")}{" "}
-            </span>
-            {t("home.features.title.part2")}
+            Everything you need in <span className="text-[#694BF1]">one </span>
+            app
           </h1>
           <h4 className="text-[#6A7687] font-inter text-[1rem] md:text-[1.125rem] max-w-[60rem] mx-auto">
-            {t("home.features.subtitle")}
+            From instant messaging to cross-border payments, AfriTalks brings
+            together all the tools you need to connect and transact across
+            Africa.
           </h4>
         </div>
 
@@ -174,7 +223,15 @@ export default function Home() {
               <div className="w-full md:w-[32.75rem] h-[24rem] md:h-[33.125rem] relative">
                 <Image
                   src={image.src}
-                  alt={t(`home.features.images.${image.key}`)}
+                  alt={
+                    image.key === "instantMessaging"
+                      ? "instant message"
+                      : image.key === "crossBorderPayments"
+                      ? "payments"
+                      : image.key === "digitalUtilities"
+                      ? "utilities"
+                      : "stories"
+                  }
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   width={524}
                   height={530}
@@ -183,10 +240,22 @@ export default function Home() {
                 <div className="absolute inset-0 transition-all duration-300" />
                 <div className="absolute top-[1.3rem] lg:top-[2.5rem] left-[1rem] lg:left-[2.5rem] right-[1rem] lg:right-[2.5rem] flex flex-col gap-[0.75rem]">
                   <h2 className="text-[#F5F3FF] font-inter w-full font-medium text-[1.3rem] md:text-[2.25rem] leading-tight tracking-[-0.03em]">
-                    {t(`home.sections.${image.key}.title`)}
+                    {image.key === "instantMessaging"
+                      ? "Instant messaging"
+                      : image.key === "crossBorderPayments"
+                      ? "Cross-border payments"
+                      : image.key === "digitalUtilities"
+                      ? "Digital Utilities"
+                      : "Social Stories"}
                   </h2>
                   <p className="text-[#F5F3FF]/90 font-inter text-[0.8rem] lg:text-[1rem] leading-[1.5] w-[75%] lg:w-full">
-                    {t(`home.sections.${image.key}.description`)}
+                    {image.key === "instantMessaging"
+                      ? "Connect & make payments to friends, family, and businesses across Africa."
+                      : image.key === "crossBorderPayments"
+                      ? "Send and receive money across African borders instantly using the PAPSS."
+                      : image.key === "digitalUtilities"
+                      ? "Pay bills, buy airtime, book services, and access essential utilities all from within the app."
+                      : "Share your moments, experiences, and culture with our engaging social video features."}
                   </p>
                 </div>
               </div>
@@ -194,7 +263,6 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
-      
 
       {/* How It Works Section */}
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto justify-center py-28">
@@ -209,13 +277,11 @@ export default function Home() {
         </div>
         <div className="w-[90%] mx-auto mt-10 lg:mt-0 lg:w-[40%] flex flex-col">
           <h1 className="font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            {t("home.howItWorks.title.part1")}{" "}
-            <span className="text-[#694BF1]">
-              {t("home.howItWorks.title.highlight")}
-            </span>
+            How Afritalks <span className="text-[#694BF1]">Works</span>
           </h1>
           <h5 className="text-[#6A7687] font-inter font-normal text-[1rem]">
-            {t("home.howItWorks.subtitle")}
+            Getting started with Africa's most comprehensive social and payment
+            platform is simple and secure.
           </h5>
           <motion.div
             className="mt-10 lg:mt-5 space-y-10"
@@ -241,10 +307,10 @@ export default function Home() {
                 </h1>
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
-                    {t(`home.howItWorks.steps.${data.id}.title`)}
+                    {data.name}
                   </h1>
                   <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
-                    {t(`home.howItWorks.steps.${data.id}.desc`)}
+                    {data.desc}
                   </h6>
                 </div>
               </motion.div>
@@ -260,13 +326,14 @@ export default function Home() {
         className="relative bg-[#F5F3FF] flex flex-col items-center h-full lg:h-fit pt-20 pb-20 lg:pb-32 mt-28 lg:mt-0 space-y-5 lg:px-40 overflow-hidden"
       >
         <h1 className="text-[#122231] text-center font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-          {t("home.papps.title.part1")}{" "}
-          <span className="text-[#694BF1]">
-            {t("home.papps.title.highlight")}
-          </span>
+          Cross border payment powered by{" "}
+          <span className="text-[#694BF1]">PAPPS</span>
         </h1>
         <p className="text-[#6A7687] text-center w-[92%] lg:w-[75%] font-inter font-normal text-[1rem]">
-          {t("home.papps.subtitle")}
+          The Pan African Payment and Settlement System (PAPSS) enables instant,
+          secure, and cost-effective cross-border payments across participating
+          African countries, making AfriTalks the future of continental
+          connectivity.
         </p>
 
         <Image
@@ -281,11 +348,12 @@ export default function Home() {
 
         <div className="lg:absolute lg:top-[26rem] flex flex-col items-center text-center gap-y-4">
           <h3 className="text-[#6A7687] text-[0.9rem] w-[80%] lg:w-full text-center font-inter font-normal">
-            {t("home.papps.availability")}
+            AfriTalks is currently available in 15 African countries with more
+            being added regularly.
           </h3>
 
           <button className=" bg-[#694BF1] text-[#F5F3FF] font-inter font-normal px-5 py-3 rounded-full">
-            {t("home.papps.viewAll")}
+            View all
           </button>
         </div>
       </motion.section>
@@ -293,14 +361,12 @@ export default function Home() {
       <section className="h-full w-fit flex flex-col lg:flex-row mx-auto lg:px-40 py-28 gap-x-5">
         <div className="w-full lg:w-[50%] px-5 lg:px-0">
           <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem]">
-            {t("home.security.title.part1")} <br />{" "}
-            <span className="text-[#694BF1]">
-              {" "}
-              {t("home.security.title.highlight")}{" "}
-            </span>
+            High-end level <br />{" "}
+            <span className="text-[#694BF1]"> security </span>
           </h1>
           <p className="text-[#6A7687] text-[1rem] w-[90%] font-inter font-normal">
-            {t("home.security.subtitle")}
+            We use the same security standards as major banks to protect your
+            data and money, ensuring every transaction is safe and secure.
           </p>
 
           <motion.div
@@ -325,10 +391,10 @@ export default function Home() {
                 <Image src={data.icon} width={50} height={50} alt={data.name} />
                 <div className="flex flex-col space-y-2">
                   <h1 className="text-[#122231] font-inter font-semibold text-[1.18rem]">
-                    {t(`home.security.features.${data.id}.name`)}
+                    {data.name}
                   </h1>
                   <h6 className="text-[#6A7687] text-[0.8rem] font-inter font-normal">
-                    {t(`home.security.features.${data.id}.desc`)}
+                    {data.desc}
                   </h6>
                 </div>
               </motion.div>
@@ -348,12 +414,8 @@ export default function Home() {
 
       <section className="w-full h-full mt-10 mb-40 pl-4 flex flex-col mx-auto">
         <h1 className="text-[#122231] font-inter font-semibold text-[2rem] lg:text-[2.75rem] lg:text-center w-[90%] lg:w-full">
-          {t("home.connecting.title.part1")}{" "}
-          <span className="text-[#694BF1]">
-            {" "}
-            {t("home.connecting.title.highlight")}{" "}
-          </span>{" "}
-          {t("home.connecting.title.part2")}
+          Connecting <span className="text-[#694BF1]"> Africa. </span> One user
+          at a time
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-10 lg:mx-32">
@@ -366,7 +428,13 @@ export default function Home() {
                 {data.rate}
               </h1>
               <p className="leading-none text-[#6A7687] font-inter font-normal text-[0.9rem]">
-                {t(`home.stats.labels.${data.state}`)}
+                {data.state === "activeUsers"
+                  ? "Active Users"
+                  : data.state === "countries"
+                  ? "Countries"
+                  : data.state === "transactions"
+                  ? "Transactions"
+                  : "Uptime"}
               </p>
             </div>
           ))}
@@ -375,15 +443,15 @@ export default function Home() {
 
       <section className="w-full h-full py-20 pb-40 bg-[#F9FAFB]">
         <h1 className="text-[2rem] lg:text-[2.75rem] font-inter font-semibold text-center leading-[2.3rem] lg:leading-[3rem] w-[80%] mx-auto lg:w-full">
-          {t("home.trusted.title.part1")}{" "}
+          Trusted by{" "}
           <span className="text-[#694BF1]">
             {" "}
-            {t("home.trusted.title.highlight")}{" "}
+            communities{" "}
           </span>{" "}
-          <br /> {t("home.trusted.title.part2")}
+          <br /> across Africa
         </h1>
         <p className="text-[#6A7687] font-inter font-normal text-[1rem] text-center w-[90%] mx-auto mt-5">
-          {t("home.trusted.subtitle")}
+          Whether you're chatting with loved ones, sending money across borders, or sharing moments through short videos, AfriTalks keeps you seamlessly connected.
         </p>
         <div className="lg:mx-30 mt-10 flex mx-auto justify-center relative overflow-hidden h-[36rem]">
           {/* faders */}
@@ -498,20 +566,16 @@ export default function Home() {
           style={{ backgroundImage: `url(${Base_Map.src})` }}
         >
           <h1 className="text-[1.75rem] lg:text-[2.5rem] font-semibold font-inter bg-gradient-to-r from-[#FFFFFF] to-[#939299] text-transparent bg-clip-text text-center">
-            {t("home.downloadCta.title")}
+            The future of African communication.
           </h1>
           <p className="text-[#F5F3FF] font-light text-[1rem] font-inter mt-2 text-center">
-            {t("home.downloadCta.subtitle")}
+            Talk, share, and send — across any border.
           </p>
           <div className="flex items-center gap-x-3 mt-5 lg:mt-10">
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image src={AppleIcon} alt="Google Icon" width={20} height={20} />
-              <span className="hidden lg:flex">
-                {t("home.downloadCta.buttons.ios")}
-              </span>
-              <span className="flex lg:hidden">
-                {t("home.downloadCta.buttons.appStore")}
-              </span>
+              <span className="hidden lg:flex">Download on iOS</span>
+              <span className="flex lg:hidden">App Store</span>
             </button>
             <button className="bg-[#694BF1] text-white px-6 py-2 rounded-full font-inter font-semibold text-[.8rem] flex items-center gap-x-1">
               <Image
@@ -520,14 +584,8 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <span className="hidden lg:flex">
-                {" "}
-                {t("home.downloadCta.buttons.android")}{" "}
-              </span>
-              <span className="flex lg:hidden">
-                {" "}
-                {t("home.downloadCta.buttons.playStore")}{" "}
-              </span>
+              <span className="hidden lg:flex">Download on Android</span>
+              <span className="flex lg:hidden">PlayStore</span>
             </button>
           </div>
         </motion.div>

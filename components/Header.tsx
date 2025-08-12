@@ -27,24 +27,24 @@ export default function Header() {
         <div className="hidden lg:flex items-center">
           <ul className="flex items-center space-x-10 font-inter font-medium text-white text-[0.875rem]">
             <li>
-              <Link href={"/#"}>{t("header.navigation.products")}</Link>
+              <Link href={"/#"}>Products</Link>
             </li>
             <li>
-              <Link href={"/#"}>{t("header.navigation.company")}</Link>
+              <Link href={"/#"}>Company</Link>
             </li>
             <li>
-              <Link href={"/#"}>{t("header.navigation.contact")}</Link>
+              <Link href={"/#"}>Contact</Link>
             </li>
           </ul>
           <button className="px-4 py-2 text-[0.875rem] rounded-full text-white font-inter font-semibold ml-10 bg-[#694BF1]">
-            {t("header.buttons.downloadNow")}
+            Download now
           </button>
         </div>
 
         <button
           onClick={toggleMenu}
           className="lg:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5 z-50"
-          aria-label={t("header.buttons.toggleMenu")}
+          aria-label="Toggle menu"
         >
           <div
             className={`w-6 h-0.5 bg-white transition-all duration-300 transform ${
@@ -80,7 +80,7 @@ export default function Header() {
           <button
             onClick={toggleMenu}
             className="flex items-center justify-center w-8 h-8 ml-auto mt-3 mr-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-            aria-label={t("header.buttons.closeMenu")}
+            aria-label="Close menu"
           >
             <svg
               className="w-5 h-5 text-gray-600"
@@ -105,7 +105,7 @@ export default function Header() {
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >
-                  {t("header.navigation.products")}
+                  Products
                 </Link>
               </li>
               <li>
@@ -114,7 +114,7 @@ export default function Header() {
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >
-                  {t("header.navigation.company")}
+                  Company
                 </Link>
               </li>
               <li>
@@ -123,7 +123,7 @@ export default function Header() {
                   onClick={toggleMenu}
                   className="block text-gray-800 font-inter font-medium text-lg hover:text-[#694BF1] transition-colors py-2"
                 >
-                  {t("header.navigation.contact")}
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -135,7 +135,7 @@ export default function Header() {
                 onClick={toggleMenu}
                 className="w-full px-6 py-3 text-white font-inter font-semibold rounded-full bg-[#694BF1] hover:bg-[#5a3ed1] transition-colors"
               >
-                {t("header.buttons.downloadNow")}
+                Download now
               </button>
             </Link>
           </div>
