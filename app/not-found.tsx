@@ -14,7 +14,8 @@ export default function NotFound() {
             backgroundClip: "text",
           }}
         >
-          404
+          {" "}
+          404{" "}
         </h1>
 
         <h2 className="font-inter text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mt-2 sm:mt-4">
